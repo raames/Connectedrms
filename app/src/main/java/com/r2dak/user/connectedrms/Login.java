@@ -54,12 +54,11 @@ public class Login {
 
         Thread.sleep(5000);
 
-    /*   dash.dashboard(driver);
+      // dash.dashboard(driver);
        dash.edit(driver);
-       client.clientManagemenet(driver);
-       client.edit_client(driver);*/
-       user_logout.logout(driver);
-
+  //     client.clientManagemenet(driver);
+     //  client.edit_client(driver);
+       //user_logout.logout(driver);
 
         driver.close();
 

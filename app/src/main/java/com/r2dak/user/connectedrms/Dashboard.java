@@ -22,7 +22,7 @@ public class Dashboard {
 
         Thread.sleep(2000);
 
-        WebElement createUser = driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div/div/div/div[1]/a"));
+        WebElement createUser = driver.findElement(By.xpath("//*[@id=\"app\"]/main/div[1]/div[2]/a"));
         createUser.click();
 
         Thread.sleep(2000);
@@ -42,7 +42,7 @@ public class Dashboard {
         Thread.sleep(3000);
 
         //click save button
-        WebElement save = driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div/div/div/div[2]/form/div[5]/div/input"));
+        WebElement save = driver.findElement(By.xpath("//*[@id=\"centralModalSuccess\"]/div/div/div[2]/form/div[5]/button"));
         save.click();
 
         Thread.sleep(5000);
@@ -56,9 +56,14 @@ public class Dashboard {
 
         //Wait for Edit button
         WebDriverWait wait = new WebDriverWait(driver, 30);
-        wait.until(ExpectedConditions.textToBePresentInElement(By.xpath("//*[@id=\"app\"]/main/div/div/div/div/div[1]/span"), "User Management"));
+        wait.until(ExpectedConditions.textToBePresentInElement(By.xpath("//*[@id=\"app\"]/main/div[1]/div[1]/h2"), "User Management"));
 
-        WebElement edit = driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div/div/div/div[2]/table/tbody/tr[1]/td[4]/a[1]"));
+        WebElement option =driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[1]/td[4]/div/button"));
+        option.click();
+
+        Thread.sleep(2000);
+
+        WebElement edit = driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[1]/td[4]/div/div/a[2]"));
         edit.click();
 
         Thread.sleep(3000);
