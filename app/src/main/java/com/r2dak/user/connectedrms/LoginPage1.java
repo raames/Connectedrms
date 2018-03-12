@@ -1,4 +1,4 @@
-package com.example.olive_001.connectedrms1;
+package com.r2dak.user.connectedrms;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -41,12 +41,11 @@ public class LoginPage1 {
         Thread.sleep(5000);
 
         dash.dbpage1(driver);
-        dash.edit(driver);
-        user.usermanagement(driver);
-        user.edituser(driver);
-        course.coursemanagement(driver);
-        course.editcourse(driver);
-        course.moduleoption(driver);
+        //dash.edit(driver);
+        //user.usermanagement(driver);
+      //  user.edituser(driver);
+//        course.editcourse(driver);
+      //  course.moduleoption(driver);
         //course.editmodule(driver);
         logout.logout1(driver);
     }

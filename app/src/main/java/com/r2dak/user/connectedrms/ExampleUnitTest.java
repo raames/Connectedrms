@@ -1,4 +1,4 @@
-package com.example.olive_001.connectedrms1;
+package com.r2dak.user.connectedrms;
 
 import org.junit.Test;
 
