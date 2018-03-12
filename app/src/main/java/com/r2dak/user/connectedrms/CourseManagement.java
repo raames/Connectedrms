@@ -14,57 +14,79 @@ public class CourseManagement {
         WebElement coursemanagement1=driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[3]/ul/li[4]/a"));
         coursemanagement1.click();
 
-        WebElement newcourse=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/a"));
+        WebElement newcourse=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[1]/div/div[1]/button"));
         newcourse.click();
         Thread.sleep(2000);
 
-        WebElement coursename=driver.findElement(By.xpath("//*[@id=\"app\"]/div/div/div/div/div[2]/form/div[1]/input"));
+        WebElement coursename=driver.findElement(By.xpath("//*[@id=\"course_name\"]"));
         coursename.sendKeys("ST Course011");
 
-        WebElement heading=driver.findElement(By.xpath("//*[@id=\"app\"]/div/div/div/div/div[2]/form/div[2]/input"));
+        WebElement heading=driver.findElement(By.xpath("//*[@id=\"course_heading\"]"));
         heading.sendKeys("Header ST0011 Course011");
 
-        WebElement description=driver.findElement(By.xpath("//*[@id=\"app\"]/div/div/div/div/div[2]/form/div[3]/textarea"));
+        WebElement description=driver.findElement(By.xpath("//*[@id=\"course_description\"]"));
         description.sendKeys("This is description 101!");
         Thread.sleep(3000);
 
-        WebElement addcourse=driver.findElement(By.xpath("//*[@id=\"app\"]/div/div/div/div/div[2]/form/div[8]/button"));
+        WebElement addcourse=driver.findElement(By.xpath("//*[@id=\"addcourse\"]/div/div/div[2]/form/div[8]/div/button"));
         addcourse.click();
         Thread.sleep(5000);
     }
 
+    public void viewcourse(WebDriver driver) throws InterruptedException {
+
+        WebElement cours1=driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[3]/ul/li[4]/a"));
+        cours1.click();
+
+        WebElement optn=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/table/tbody/tr/td[5]/div/button"));
+        optn.click();
+        Thread.sleep(2000);
+
+        WebElement courseview=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/table/tbody/tr/td[5]/div/div/a[1]"));
+        courseview.click();
+        Thread.sleep(3000);
+
+        WebElement courses=driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[3]/ul/li[4]/a"));
+        courses.click();
+        Thread.sleep(4000);
+    }
+
     public void editcourse(WebDriver driver) throws InterruptedException {
-       WebElement optioncourse=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[3]/div/div/div[2]/table/tbody/tr[1]/td[5]/div/button"));
+       WebElement optioncourse=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/table/tbody/tr/td[5]/div/button"));
        optioncourse.click();
 
-       WebElement courseedit=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[3]/div/div/div[2]/table/tbody/tr[1]/td[5]/div/div/a[2]"));
+       WebElement courseedit=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/table/tbody/tr[1]/td[5]/div/div/a[2]"));
        courseedit.click();
 
        WebElement coursename=driver.findElement(By.xpath("//*[@id=\"name\"]"));
        coursename.clear();
        coursename.sendKeys("ST001 Course001");
 
-       WebElement headingcourse=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/form/div[2]/input"));
+       WebElement headingcourse=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/form/div[2]/div[2]/input"));
        headingcourse.clear();
        headingcourse.sendKeys("Header1 ST001 Course001");
        Thread.sleep(3000);
 
-       WebElement editadd=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/form/div[8]/div/input"));
+       WebElement editadd=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/form/div[8]/div[2]/div/input"));
        editadd.click();
        Thread.sleep(5000);
     }
 
     public void moduleoption(WebDriver driver) throws InterruptedException {
 
-        WebElement optionmodule=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[3]/div/div/div[2]/table/tbody/tr[1]/td[5]/div/button"));
+        WebElement optionmodule=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/table/tbody/tr[1]/td[5]/div/button"));
         optionmodule.click();
 
-        WebElement viewmodules=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[3]/div/div/div[2]/table/tbody/tr[1]/td[5]/div/div/a[3]"));
+        /*WebElement viewmodules=driver.findElement(By.xpath("/[@id=\"app\"]/main/div/div[2]/div/div/div[2]/table/tbody/tr/td[5]/div/button"));
         viewmodules.click();
-        Thread.sleep(3000);
+        Thread.sleep(3000);*/
 
-        WebElement addmodule=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/a"));
-        addmodule.click();
+        WebElement modules=driver.findElement(By.xpath("/*//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/table/tbody/tr/td[5]/div/div/a[3]"));
+        modules.click();
+        Thread.sleep(2000);
+
+        WebElement addmodules=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[1]/div/div[1]/button"));
+        addmodules.click();
         Thread.sleep(2000);
 
         WebElement modulename=driver.findElement(By.xpath("//*[@id=\"name\"]"));
@@ -84,7 +106,7 @@ public class CourseManagement {
         WebElement editoption=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[3]/div/div/div[2]/table/tbody/tr/td[4]/div/button"));
         editoption.click();
 
-        WebElement editmodule1=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[3]/div/div/div[2]/table/tbody/tr/td[4]/div/div/a[2]"));
+        WebElement editmodule1=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/table/tbody/tr/td[4]/div/div/a[2]"));
         editmodule1.click();
         Thread.sleep(2000);
 

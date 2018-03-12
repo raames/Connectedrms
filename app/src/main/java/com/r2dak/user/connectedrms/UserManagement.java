@@ -16,7 +16,7 @@ public class UserManagement {
         WebElement usermanagement1=driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[3]/ul/li[3]/a"));
         usermanagement1.click();
 
-        WebElement adduser=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div[1]/div[2]/a"));
+        WebElement adduser=driver.findElement(By.xpath("//*[@id=\"add-user\"]"));
         adduser.click();
         Thread.sleep(2000);
 
@@ -33,10 +33,25 @@ public class UserManagement {
         confirmpassword.sendKeys("password");
         Thread.sleep(3000);
 
-        WebElement adduser1=driver.findElement(By.xpath("//*[@id=\"centralModalSuccess\"]/div/div/div[2]/form/div[5]/button"));
+        WebElement adduser1=driver.findElement(By.xpath("//*[@id=\"centralModalSuccess\"]/div/div/div[2]/form/div[5]/div/button"));
         adduser1.click();
         Thread.sleep(5000);
 
+    }
+
+    public void viewuser (WebDriver driver) throws InterruptedException {
+
+        WebElement optionview=driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[1]/td[4]/div/button"));
+        optionview.click();
+        Thread.sleep(2000);
+
+        WebElement userview=driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[1]/td[4]/div/div/a[1]"));
+        userview.click();
+        Thread.sleep(3000);
+
+        WebElement users=driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[3]/ul/li[3]/a"));
+        users.click();
+        Thread.sleep(5000);
     }
 
     public void edituser (WebDriver driver) throws InterruptedException {

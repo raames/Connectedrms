@@ -26,9 +26,25 @@ public class DashboardPage1 {
         subdomain.sendKeys("oliveaccess000");
         Thread.sleep(3000);
 
-        WebElement add=driver.findElement(By.xpath("//*[@id=\"clientmodel\"]/div/div/div[2]/form/div[7]/button"));
+        WebElement add=driver.findElement(By.xpath("//*[@id=\"clientmodel\"]/div/div/div[2]/form/div[7]/div/button"));
         add.click();
         Thread.sleep(5000);
+
+    }
+
+    public void view(WebDriver driver) throws InterruptedException {
+
+        WebElement optnbtn = driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[1]/td[4]/div/button"));
+        optnbtn.click();
+        Thread.sleep(2000);
+
+        WebElement viewbtn = driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[1]/td[4]/div/div/a[1]"));
+        viewbtn.click();
+        Thread.sleep(5000);
+
+        WebElement client=driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[3]/ul/li[2]/a"));
+        client.click();
+        Thread.sleep(4000);
     }
 
     public void edit(WebDriver driver) throws InterruptedException {
