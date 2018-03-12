@@ -15,7 +15,7 @@ public class DashboardPage1 {
         WebElement clientmanagement=driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[3]/ul/li[2]/a"));
         clientmanagement.click();
 
-        WebElement addclient=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div[1]/div[2]/button"));
+        WebElement addclient=driver.findElement(By.xpath("//*[@id=\"add-client\"]"));
         addclient.click();
         Thread.sleep(2000);
 

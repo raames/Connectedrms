@@ -44,8 +44,9 @@ public class LoginPage1 {
         //dash.edit(driver);
         //user.usermanagement(driver);
       //  user.edituser(driver);
-//        course.editcourse(driver);
-      //  course.moduleoption(driver);
+       // course.coursemanagement(driver);
+      //course.editcourse(driver);
+     // course.moduleoption(driver);
         //course.editmodule(driver);
         logout.logout1(driver);
     }

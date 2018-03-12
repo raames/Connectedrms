@@ -19,13 +19,13 @@ public class CourseManagement {
         Thread.sleep(2000);
 
         WebElement coursename=driver.findElement(By.xpath("//*[@id=\"app\"]/div/div/div/div/div[2]/form/div[1]/input"));
-        coursename.sendKeys("ST Course01");
+        coursename.sendKeys("ST Course011");
 
         WebElement heading=driver.findElement(By.xpath("//*[@id=\"app\"]/div/div/div/div/div[2]/form/div[2]/input"));
-        heading.sendKeys("Header ST001 Course01");
+        heading.sendKeys("Header ST0011 Course011");
 
         WebElement description=driver.findElement(By.xpath("//*[@id=\"app\"]/div/div/div/div/div[2]/form/div[3]/textarea"));
-        description.sendKeys("This is description 1!");
+        description.sendKeys("This is description 101!");
         Thread.sleep(3000);
 
         WebElement addcourse=driver.findElement(By.xpath("//*[@id=\"app\"]/div/div/div/div/div[2]/form/div[8]/button"));
