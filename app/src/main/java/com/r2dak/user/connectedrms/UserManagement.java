@@ -56,13 +56,16 @@ public class UserManagement {
 
     public void edituser (WebDriver driver) throws InterruptedException {
 
+        WebElement clickuser=driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[3]/ul/li[3]/a"));
+        clickuser.click();
+        Thread.sleep(2000);
 
-        WebElement optionsedit=driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[2]/td[4]/div/button"));
+        WebElement optionsedit=driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[1]/td[4]/div/button"));
         optionsedit.click();
 
-        WebElement useredit=driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[2]/td[4]/div/div/a[2]"));
+        WebElement useredit=driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[1]/td[4]/div/div/a[2]"));
         useredit.click();
-        Thread.sleep(5000);
+        Thread.sleep(3000);
 
         WebElement edituser1=driver.findElement(By.xpath("//*[@id=\"name\"]"));
         edituser1.clear();
@@ -73,7 +76,7 @@ public class UserManagement {
         editemail.sendKeys("rabin012@yopmail.com");
         Thread.sleep(3000);
 
-        WebElement savebutton=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/form/div[3]/div/input"));
+        WebElement savebutton=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/form/div[3]/div[2]/div/input"));
         savebutton.click();
         Thread.sleep(10000);
 

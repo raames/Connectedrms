@@ -28,7 +28,7 @@ public class CourseManagement {
         description.sendKeys("This is description 101!");
         Thread.sleep(3000);
 
-        WebElement addcourse=driver.findElement(By.xpath("//*[@id=\"addcourse\"]/div/div/div[2]/form/div[8]/div/button"));
+        WebElement addcourse=driver.findElement(By.xpath("//*[@id=\"addcourse\"]/div/div/div[2]/form/div[9]/div/button"));
         addcourse.click();
         Thread.sleep(5000);
     }
@@ -67,7 +67,7 @@ public class CourseManagement {
        headingcourse.sendKeys("Header1 ST001 Course001");
        Thread.sleep(3000);
 
-       WebElement editadd=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/form/div[8]/div[2]/div/input"));
+       WebElement editadd=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/form/div[9]/div[2]/div/input"));
        editadd.click();
        Thread.sleep(5000);
     }

@@ -20,10 +20,10 @@ public class DashboardPage1 {
         Thread.sleep(2000);
 
         WebElement name=driver.findElement(By.xpath("//*[@id=\"name\"]"));
-        name.sendKeys("Olive Access");
+        name.sendKeys("Olive Acces1");
 
         WebElement subdomain=driver.findElement(By.xpath("//*[@id=\"sub_domain\"]"));
-        subdomain.sendKeys("oliveaccess000");
+        subdomain.sendKeys("oliveacces00");
         Thread.sleep(3000);
 
         WebElement add=driver.findElement(By.xpath("//*[@id=\"clientmodel\"]/div/div/div[2]/form/div[7]/div/button"));
@@ -56,16 +56,16 @@ public class DashboardPage1 {
         WebElement edit=driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[1]/td[4]/div/div/a[2]"));
         edit.click();
 
-        WebElement editname=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/form/div[1]/input"));
+        WebElement editname=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/form/div[1]/div[2]/input"));
         editname.clear();
-        editname.sendKeys("Olive Access01");
+        editname.sendKeys("Olive Access101");
 
-        WebElement editsub=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/form/div[2]/input"));
+        WebElement editsub=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/form/div[2]/div[2]/input"));
         editsub.clear();
-        editsub.sendKeys("oliveaccess100");
+        editsub.sendKeys("oliveaccess010");
         Thread.sleep(3000);
 
-        WebElement editsave=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/form/div[7]/div/input"));
+        WebElement editsave=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/form/div[7]/div[2]/div/input"));
         editsave.click();
         Thread.sleep(10000);
 
