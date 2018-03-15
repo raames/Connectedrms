@@ -43,13 +43,14 @@ public class LoginPage1 {
         //dash.dbpage1(driver);
         //dash.view(driver);
         //dash.edit(driver);
+        dash.brandings(driver);
         //user.usermanagement(driver);
         //user.viewuser(driver);
         //user.edituser(driver);
-       course.coursemanagement(driver);
-       course.viewcourse(driver);
-       course.editcourse(driver);
-       course.moduleoption(driver);
+       //course.coursemanagement(driver);
+       //course.viewcourse(driver);
+       //course.editcourse(driver);
+       //course.moduleoption(driver);
         //course.editmodule(driver);
         logout.logout1(driver);
     }
