@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import ae.java.awt.AWTException;
+
 /**
  * Created by olive-001 on 3/6/18.
  */
@@ -17,8 +19,11 @@ public class LoginPage1 {
     public CourseManagement course=new CourseManagement();
     public LogoutPage logout=new LogoutPage();
 
+    public LoginPage1() throws AWTException {
+    }
+
     @Test
-    public void setup() throws InterruptedException {
+    public void setup() throws Exception {
 
         System.getProperty("webdriver.gecko.driver","//usr/bin//geckodriver");
         WebDriver driver=new FirefoxDriver();
@@ -43,7 +48,7 @@ public class LoginPage1 {
         //dash.dbpage1(driver);
         //dash.view(driver);
         //dash.edit(driver);
-        dash.brandings(driver);
+        dash.branding(driver);
         //user.usermanagement(driver);
         //user.viewuser(driver);
         //user.edituser(driver);
@@ -52,6 +57,6 @@ public class LoginPage1 {
        //course.editcourse(driver);
        //course.moduleoption(driver);
         //course.editmodule(driver);
-        logout.logout1(driver);
+        //logout.logout1(driver);
     }
 }

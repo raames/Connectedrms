@@ -25,6 +25,7 @@ dependencies {
     implementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    implementation 'org.testng:testng:6.7'
     implementation files('libs/byte-buddy-1.7.9.jar')
     implementation files('libs/client-combined-3.9.1.jar')
     implementation files('libs/client-combined-3.9.1-sources.jar')
@@ -37,4 +38,5 @@ dependencies {
     implementation files('libs/httpcore-4.4.6.jar')
     implementation files('libs/okhttp-3.9.1.jar')
     implementation files('libs/okio-1.13.0.jar')
+    implementation files('libs/ae-awt.jar')
 }

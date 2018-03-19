@@ -1,8 +1,7 @@
 package com.r2dak.user.connectedrms;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -77,7 +76,7 @@ public class DashboardPage1 {
 
     }
 
-    public void brandings(WebDriver driver) throws InterruptedException {
+    public void branding(WebDriver driver) throws Exception {
 
         WebElement client=driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[3]/ul/li[2]/a"));
         client.click();
@@ -137,11 +136,11 @@ public class DashboardPage1 {
         clickclient.click();
         Thread.sleep(2000);*/
 
-        WebElement optn=driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[1]/td[4]/div/button"));
+        WebElement optn=driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[2]/td[4]/div/button"));
         optn.click();
         Thread.sleep(3000);
 
-        WebElement branding=driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[1]/td[4]/div/div/a[4]"));
+        WebElement branding=driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[2]/td[4]/div/div/a[4]"));
         branding.click();
         Thread.sleep(5000);
 
@@ -153,11 +152,161 @@ public class DashboardPage1 {
         WebElement customize=driver.findElement(By.xpath("//*[@id=\"config-btn\"]"));
         customize.click();
 
+    //    WebElement header = driver.findElement(By.xpath("/html/body/form/div[2]/a[2]"));
+    //    header.click();
+
+/*       */
+
         WebElement logo = driver.findElement(By.xpath("/html/body/form/div[2]/a[1]"));
         logo.click();
 
+        WebElement upload_img = driver.findElement(By.xpath("/html/body/form/div[4]/div[1]"));
+        upload_img.click();
         Thread.sleep(3000);
-    }
 
+        Runtime.getRuntime().exec("C:\\Users\\User\\Desktop\\AutoIt\\fileupload.exe");
+
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath("/html/body/form/div[2]/a[2]")).click();  //header
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//*[@id=\"cp1\"]")).click();  //bg color
+        Thread.sleep(3000);
+
+        driver.findElement(By.xpath("/html/body/div[2]/div[1]/i")).click(); //select color
+        Thread.sleep(3000);
+
+        driver.findElement(By.xpath("/html/body/div[3]/div[1]/i/i"));   //close
+        Thread.sleep(3000);
+
+        /*driver.findElement(By.xpath("/html/body/form/div[2]/a[3]")).click();    //Footer
+        Thread.sleep(3000);
+
+        driver.findElement(By.xpath("/html/body/form/div[6]/input[1]")).click();    //bg color
+        Thread.sleep(3000);
+
+        driver.findElement(By.xpath("/html/body/div[4]/div[1]/i")).click(); //select bg color
+        Thread.sleep(3000);
+
+        driver.findElement(By.xpath("/html/body/form/div[6]/h4")).click();
+        driver.findElement(By.xpath("/html/body/form/div[6]/input[2]")).click();    //text field click
+        Thread.sleep(3000);
+
+        driver.findElement(By.xpath("/html/body/div[5]/div[1]/i")).click();
+        Thread.sleep(3000);
+
+        driver.findElement(By.xpath("/html/body/form/div[2]/a[4]")).click();    //Organisation Branding
+        driver.findElement(By.xpath("/html/body/form/div[7]/input")).click(); //organisation branding color
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath("/html/body/div[6]/div[1]/i")).click(); //select branding color
+        driver.findElement(By.xpath("/html/body/form/div[7]/label[1]")).click();    //random click
+        driver.findElement(By.xpath("/html/body/form/div[7]/div[1]")).click();    //organisation imgae click
+        Thread.sleep(2000);
+
+        Runtime.getRuntime().exec("C:\\Users\\User\\Desktop\\AutoIt\\fileupload.exe");
+        Thread.sleep(3000);
+
+        driver.findElement(By.xpath("/html/body/form/div[2]/a[5]")).click();    //support button
+
+        driver.findElement(By.xpath("/html/body/form/div[8]/input[1]")).click();    //bgcolor
+        driver.findElement(By.xpath("/html/body/div[7]/div[1]/i")).click();         //select bg color
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath("/html/body/form/div[8]/label[1]")).click();    //random click
+        driver.findElement(By.xpath("/html/body/form/div[8]/input[2]")).click();    //text field
+        driver.findElement(By.xpath("/html/body/div[8]/div[1]/i")).click();         //select text color
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath("/html/body/form/div[2]/a[6]")).click();    //sign in button
+
+        driver.findElement(By.xpath("/html/body/form/div[9]/input[1]")).click();    //bgcolor
+        driver.findElement(By.xpath("/html/body/div[9]/div[1]/i")).click();         //select bg color
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath("/html/body/form/div[9]/label[1]")).click();    //random click
+        driver.findElement(By.xpath("/html/body/form/div[9]/input[2]")).click();    //text field
+        driver.findElement(By.xpath("/html/body/div[10]/div[1]/i")).click();         //select text color
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath("/html/body/form/div[2]/a[7]")).click();    //purchase button
+
+        driver.findElement(By.xpath("/html/body/form/div[10]/input[1]")).click();    //bgcolor
+        driver.findElement(By.xpath("/html/body/div[11]/div[1]/i")).click();         //select bg color
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath("/html/body/form/div[10]/label[1]")).click();    //random click
+        driver.findElement(By.xpath("/html/body/form/div[10]/input[2]")).click();    //text field
+        driver.findElement(By.xpath("/html/body/div[12]/div[1]/i")).click();         //select text color
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath("/html/body/form/div[2]/a[8]")).click();    //enroll button
+
+        driver.findElement(By.xpath("/html/body/form/div[11]/input[1]")).click();    //bgcolor
+        driver.findElement(By.xpath("/html/body/div[13]/div[1]/i")).click();         //select bg color
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath("/html/body/form/div[11]/label[1]")).click();    //random click
+        driver.findElement(By.xpath("/html/body/form/div[11]/input[2]")).click();    //text field
+        driver.findElement(By.xpath("/html/body/div[14]/div[1]/i")).click();         //select text color
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath("/html/body/form/div[2]/a[9]")).click();    //primary background
+
+        driver.findElement(By.xpath("/html/body/form/div[12]/input[1]")).click();    //bgcolor
+        driver.findElement(By.xpath("/html/body/div[15]/div[1]/i")).click();         //select bg color
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath("/html/body/form/div[12]/label[1]")).click();    //random click
+        driver.findElement(By.xpath("/html/body/form/div[12]/input[2]")).click();    //text field
+        driver.findElement(By.xpath("/html/body/div[16]/div[1]/i")).click();         //select text color
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath("/html/body/form/div[2]/a[10]")).click();    //secondary background
+
+        driver.findElement(By.xpath("/html/body/form/div[13]/input[1]")).click();    //bgcolor
+        driver.findElement(By.xpath("/html/body/div[17]/div[1]/i")).click();         //select bg color
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath("/html/body/form/div[13]/label[1]")).click();    //random click
+        driver.findElement(By.xpath("/html/body/form/div[13]/input[2]")).click();    //text field
+        driver.findElement(By.xpath("/html/body/div[18]/div[1]/i")).click();         //select text color
+        Thread.sleep(5000);*/
+
+        driver.findElement(By.xpath("//*[@id=\"saveBranding\"]")).click();
+
+        Thread.sleep(15000);
+
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.alertIsPresent());
+        Alert alert = driver.switchTo().alert();
+        alert.accept();
+
+        Thread.sleep(5000);
+
+        driver.close();
+
+
+      /*  System.setProperty("java.awt.headless", "true");
+        Robot robot = new Robot();
+
+            robot.setAutoDelay(2000);
+            StringSelection stringSelection = new StringSelection("C:\\Users\\User\\Desktop\\Pink-Butterfly-PNG-File.png");
+            Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection,null);
+            robot.setAutoDelay(1000);
+
+            robot.keyPress(KeyEvent.VK_CONTROL);
+            robot.keyPress(KeyEvent.VK_V);
+
+            robot.keyRelease(KeyEvent.VK_CONTROL);
+            robot.keyRelease(KeyEvent.VK_V);
+
+            robot.setAutoDelay(1000);
+
+            robot.keyPress(KeyEvent.VK_ENTER);
+            robot.keyRelease(KeyEvent.VK_ENTER);
+            Thread.sleep(3000);
+*/
+    }
 
 }
