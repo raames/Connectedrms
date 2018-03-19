@@ -45,18 +45,19 @@ public class LoginPage1 {
         loginbutton.click();
         Thread.sleep(5000);
 
-        //dash.dbpage1(driver);
-        //dash.view(driver);
-        //dash.edit(driver);
-        dash.branding(driver);
-        //user.usermanagement(driver);
-        //user.viewuser(driver);
-        //user.edituser(driver);
-       //course.coursemanagement(driver);
-       //course.viewcourse(driver);
-       //course.editcourse(driver);
-       //course.moduleoption(driver);
-        //course.editmodule(driver);
-        //logout.logout1(driver);
+      /*  dash.dbpage1(driver);
+        dash.view(driver);
+        dash.edit(driver);
+         // dash.branding(driver);
+        user.usermanagement(driver);
+       user.viewuser(driver);
+       user.edituser(driver);*/
+       course.coursemanagement(driver);
+       course.viewcourse(driver);
+        course.editcourse(driver);
+       course.moduleoption(driver);
+       course.editmodule(driver);
+       dash.branding(driver);
+        logout.logout1(driver);
     }
 }

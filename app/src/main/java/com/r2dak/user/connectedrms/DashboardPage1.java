@@ -25,10 +25,10 @@ public class DashboardPage1 {
         Thread.sleep(2000);
 
         WebElement name=driver.findElement(By.xpath("//*[@id=\"name\"]"));
-        name.sendKeys("Olive Acces1");
+        name.sendKeys("Olive 12s111");
 
         WebElement subdomain=driver.findElement(By.xpath("//*[@id=\"sub_domain\"]"));
-        subdomain.sendKeys("oliveacces00");
+        subdomain.sendKeys("oliv1as asd");
         Thread.sleep(3000);
 
         WebElement add=driver.findElement(By.xpath("//*[@id=\"clientmodel\"]/div/div/div[2]/form/div[7]/div/button"));
@@ -63,11 +63,11 @@ public class DashboardPage1 {
 
         WebElement editname=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/form/div[1]/div[2]/input"));
         editname.clear();
-        editname.sendKeys("Olive Access101");
+        editname.sendKeys("Olive Access1011");
 
         WebElement editsub=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/form/div[2]/div[2]/input"));
         editsub.clear();
-        editsub.sendKeys("oliveaccess010");
+        editsub.sendKeys("oliveaccess01001");
         Thread.sleep(3000);
 
         WebElement editsave=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/form/div[7]/div[2]/div/input"));
@@ -179,7 +179,7 @@ public class DashboardPage1 {
         driver.findElement(By.xpath("/html/body/div[3]/div[1]/i/i"));   //close
         Thread.sleep(3000);
 
-        /*driver.findElement(By.xpath("/html/body/form/div[2]/a[3]")).click();    //Footer
+        driver.findElement(By.xpath("/html/body/form/div[2]/a[3]")).click();    //Footer
         Thread.sleep(3000);
 
         driver.findElement(By.xpath("/html/body/form/div[6]/input[1]")).click();    //bg color
@@ -271,20 +271,20 @@ public class DashboardPage1 {
         driver.findElement(By.xpath("/html/body/form/div[13]/label[1]")).click();    //random click
         driver.findElement(By.xpath("/html/body/form/div[13]/input[2]")).click();    //text field
         driver.findElement(By.xpath("/html/body/div[18]/div[1]/i")).click();         //select text color
-        Thread.sleep(5000);*/
+        Thread.sleep(5000);
 
         driver.findElement(By.xpath("//*[@id=\"saveBranding\"]")).click();
 
         Thread.sleep(15000);
 
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, 15);
         wait.until(ExpectedConditions.alertIsPresent());
         Alert alert = driver.switchTo().alert();
         alert.accept();
 
         Thread.sleep(5000);
 
-        driver.close();
+        driver.switchTo().window(tabs.get(0));
 
 
       /*  System.setProperty("java.awt.headless", "true");

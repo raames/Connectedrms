@@ -1,6 +1,7 @@
 package com.r2dak.user.connectedrms;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -9,8 +10,9 @@ import org.openqa.selenium.WebElement;
  */
 
 public class CourseManagement {
-    public void coursemanagement (WebDriver driver) throws InterruptedException {
 
+    public void coursemanagement (WebDriver driver) throws InterruptedException {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
         WebElement coursemanagement1=driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[3]/ul/li[4]/a"));
         coursemanagement1.click();
 
@@ -24,9 +26,14 @@ public class CourseManagement {
         WebElement heading=driver.findElement(By.xpath("//*[@id=\"course_heading\"]"));
         heading.sendKeys("Header ST0011 Course011");
 
-        WebElement description=driver.findElement(By.xpath("//*[@id=\"course_description\"]"));
-        description.sendKeys("This is description 101!");
-        Thread.sleep(3000);
+        WebElement description=driver.findElement(By.xpath("/html/body/div[1]/main/div/div[2]/div/div/div[1]/div/div[2]/div/div/div[2]/form/div[3]/div/div"));
+        js.executeScript("CKEDITOR.instances.course_description.setData('This is description')");
+       // description.sendKeys("This is description 101!");
+        Thread.sleep(5000);
+
+        // js.executeScript("arguments[0].scrollIntoView();", "/*//*[@id=\"app\"]/main/div[5]/div/div/div[2]/div[2]");
+        ((JavascriptExecutor) driver)
+                .executeScript("window.scrollTo(0, document.body.scrollHeight)");
 
         WebElement addcourse=driver.findElement(By.xpath("//*[@id=\"addcourse\"]/div/div/div[2]/form/div[9]/div/button"));
         addcourse.click();
