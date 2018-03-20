@@ -28,7 +28,7 @@ public class DashboardPage1 {
         name.sendKeys("Olive 12s111");
 
         WebElement subdomain=driver.findElement(By.xpath("//*[@id=\"sub_domain\"]"));
-        subdomain.sendKeys("oliv1as asd");
+        subdomain.sendKeys("olive1");
         Thread.sleep(3000);
 
         WebElement add=driver.findElement(By.xpath("//*[@id=\"clientmodel\"]/div/div/div[2]/form/div[7]/div/button"));
@@ -67,7 +67,7 @@ public class DashboardPage1 {
 
         WebElement editsub=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/form/div[2]/div[2]/input"));
         editsub.clear();
-        editsub.sendKeys("oliveaccess01001");
+        editsub.sendKeys("oliveacces1");
         Thread.sleep(3000);
 
         WebElement editsave=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/form/div[7]/div[2]/div/input"));
