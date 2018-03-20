@@ -96,10 +96,10 @@ public class CourseManagement {
         addmodules.click();
         Thread.sleep(2000);
 
-        WebElement modulename=driver.findElement(By.xpath("//*[@id=\"name\"]"));
+        WebElement modulename=driver.findElement(By.xpath("//*[@id=\"module_name\"]"));
         modulename.sendKeys("Module001");
 
-        WebElement moduledes=driver.findElement(By.xpath("//*[@id=\"description\"]"));
+        WebElement moduledes=driver.findElement(By.xpath("//*[@id=\"module_description\"]"));
         moduledes.sendKeys("Module1001 Description001");
         Thread.sleep(3000);
 
@@ -110,7 +110,7 @@ public class CourseManagement {
 
     public void editmodule(WebDriver driver) throws InterruptedException {
 
-        WebElement editoption=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[3]/div/div/div[2]/table/tbody/tr/td[4]/div/button"));
+        WebElement editoption=driver.findElement(By.xpath("/html/body/div[1]/main/div/div[2]/div/div/div[2]/table/tbody/tr[1]/td[4]/div/button"));
         editoption.click();
 
         WebElement editmodule1=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/table/tbody/tr/td[4]/div/div/a[2]"));

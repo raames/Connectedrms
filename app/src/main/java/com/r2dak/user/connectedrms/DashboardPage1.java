@@ -25,10 +25,10 @@ public class DashboardPage1 {
         Thread.sleep(2000);
 
         WebElement name=driver.findElement(By.xpath("//*[@id=\"name\"]"));
-        name.sendKeys("Olive 12s111");
+        name.sendKeys("Olive Test12");
 
         WebElement subdomain=driver.findElement(By.xpath("//*[@id=\"sub_domain\"]"));
-        subdomain.sendKeys("olive1");
+        subdomain.sendKeys("olive12");
         Thread.sleep(3000);
 
         WebElement add=driver.findElement(By.xpath("//*[@id=\"clientmodel\"]/div/div/div[2]/form/div[7]/div/button"));
@@ -63,11 +63,11 @@ public class DashboardPage1 {
 
         WebElement editname=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/form/div[1]/div[2]/input"));
         editname.clear();
-        editname.sendKeys("Olive Access1011");
+        editname.sendKeys("Olive Access102");
 
         WebElement editsub=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/form/div[2]/div[2]/input"));
         editsub.clear();
-        editsub.sendKeys("oliveacces1");
+        editsub.sendKeys("oliveacces110");
         Thread.sleep(3000);
 
         WebElement editsave=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/form/div[7]/div[2]/div/input"));
@@ -82,65 +82,58 @@ public class DashboardPage1 {
         client.click();
         Thread.sleep(2000);
 
-       /* WebElement option=driver.findElement(By.xpath("/*//*[@id=\"datatables_wrapper\"]/tbody/tr[1]/td[4]/div/button"));
+        WebElement option=driver.findElement(By.xpath("/html/body/div[1]/main/div[3]/div/div/div/div[2]/table/tbody/tr[1]/td[4]/div"));
         option.click();
         Thread.sleep(2000);
 
-        WebElement courses=driver.findElement(By.xpath("/*//*[@id=\"datatables_wrapper\"]/tbody/tr[1]/td[4]/div/div/a[3]"));
+        WebElement courses=driver.findElement(By.xpath("/html/body/div[1]/main/div[3]/div/div/div/div[2]/table/tbody/tr[1]/td[4]/div/div/a[3]"));
         courses.click();
         Thread.sleep(2000);
 
 
-
-            if(cardlist!=driver.findElement(By.xpath("/*//*[@id=\"app\"]/main/div[5]/div/div/div[1]/div[2]/div/a[1]/div/div[1]"))){
-                JavascriptExecutor js = (JavascriptExecutor) driver;
-                // js.executeScript("arguments[0].scrollIntoView();", "/*//*[@id=\"app\"]/main/div[5]/div/div/div[2]/div[2]");
-                ((JavascriptExecutor) driver)
-                        .executeScript("window.scrollTo(0, document.body.scrollHeight)");
-            }*/
-
-            /*WebElement testcourse = driver.findElement(By.xpath("/*//*[@id=\"app\"]/main/div[5]/div/div/div[1]/div[2]/div/a[1]/div/div[1]"));
+            WebElement testcourse = driver.findElement(By.xpath("/html/body/div[1]/main/div[5]/div/div/div[1]/div[2]/div/a[1]/div/div[2]/i"));
             testcourse.click();
             Thread.sleep(2000);
 
-            WebElement courseoverview = driver.findElement(By.xpath("/*//*[@id=\"display_overview\"]"));
+            WebElement courseoverview = driver.findElement(By.xpath("//*[@id=\"display_overview\"]"));
             courseoverview.click();
 
-            WebElement coursepreview = driver.findElement(By.xpath("/*//*[@id=\"display_preview\"]"));
+            WebElement coursepreview = driver.findElement(By.xpath("//*[@id=\"display_preview\"]"));
             coursepreview.click();
 
-            WebElement defaultcourse = driver.findElement(By.xpath("/*//*[@id=\"is_default\"]"));
+            WebElement defaultcourse = driver.findElement(By.xpath("//*[@id=\"is_default\"]"));
             defaultcourse.click();
             Thread.sleep(2000);
 
-            WebElement licenseid = driver.findElement(By.xpath("/*//*[@id=\"license_id\"]"));
+            WebElement licenseid = driver.findElement(By.xpath("//*[@id=\"license_id\"]"));
             licenseid.sendKeys("1234567");
             Thread.sleep(2000);
 
-            WebElement gbp = driver.findElement(By.xpath("/*//*[@id=\"GBP\"]"));
+            WebElement gbp = driver.findElement(By.xpath("//*[@id=\"GBP\"]"));
             gbp.click();
             Thread.sleep(2000);
 
-            WebElement price = driver.findElement(By.xpath("/*//*[@id=\"GBP-price\"]"));
+            WebElement price = driver.findElement(By.xpath("//*[@id=\"GBP-price\"]"));
             price.sendKeys("200");
 
-            WebElement vat = driver.findElement(By.xpath("/*//*[@id=\"GBP-vat\"]"));
+            WebElement vat = driver.findElement(By.xpath("//*[@id=\"GBP-vat\"]"));
             vat.sendKeys("13");
             Thread.sleep(3000);
 
-            WebElement add = driver.findElement(By.xpath("/*//*[@id=\"addcourseForm\"]/div[10]/button"));
+            WebElement add = driver.findElement(By.xpath("/html/body/div[1]/main/div[3]/div/div/div[2]/div/form/div[10]/button"));
             add.click();
             Thread.sleep(2000);
 
-        WebElement clickclient=driver.findElement(By.xpath("/*//*[@id=\"slide-out\"]/ul/li[3]/ul/li[2]/a"));
+        WebElement clickclient=driver.findElement(By.xpath("/html/body/div[1]/header/div/ul/li[3]/ul/li[2]/a"));
         clickclient.click();
-        Thread.sleep(2000);*/
+        Thread.sleep(2000);
 
-        WebElement optn=driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[2]/td[4]/div/button"));
+        WebElement optn=driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[1]/td[4]/div/button"));
         optn.click();
         Thread.sleep(3000);
 
-        WebElement branding=driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[2]/td[4]/div/div/a[4]"));
+        WebElement branding=driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[1]/td[4]/div/div/a[4]"));
+        Thread.sleep(2000);
         branding.click();
         Thread.sleep(5000);
 
@@ -151,11 +144,6 @@ public class DashboardPage1 {
 
         WebElement customize=driver.findElement(By.xpath("//*[@id=\"config-btn\"]"));
         customize.click();
-
-    //    WebElement header = driver.findElement(By.xpath("/html/body/form/div[2]/a[2]"));
-    //    header.click();
-
-/*       */
 
         WebElement logo = driver.findElement(By.xpath("/html/body/form/div[2]/a[1]"));
         logo.click();
@@ -306,7 +294,12 @@ public class DashboardPage1 {
             robot.keyPress(KeyEvent.VK_ENTER);
             robot.keyRelease(KeyEvent.VK_ENTER);
             Thread.sleep(3000);
-*/
+
+                JavascriptExecutor js = (JavascriptExecutor) driver;
+                // js.executeScript("arguments[0].scrollIntoView();", "/*//*[@id=\"app\"]/main/div[5]/div/div/div[2]/div[2]");
+                ((JavascriptExecutor) driver)
+                        .executeScript("window.scrollTo(0, document.body.scrollHeight)");
+            }*/
     }
 
 }
