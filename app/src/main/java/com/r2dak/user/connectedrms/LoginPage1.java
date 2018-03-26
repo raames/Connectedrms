@@ -17,6 +17,7 @@ public class LoginPage1 {
     public DashboardPage1 dash=new DashboardPage1();
     public UserManagement user=new UserManagement();
     public CourseManagement course=new CourseManagement();
+    public Client_Customization customize = new Client_Customization();
     public LogoutPage logout=new LogoutPage();
 
     public LoginPage1() throws AWTException {
@@ -48,7 +49,6 @@ public class LoginPage1 {
         dash.dbpage1(driver);
         dash.view(driver);
         dash.edit(driver);
-         // dash.branding(driver);
         user.usermanagement(driver);
        user.viewuser(driver);
        user.edituser(driver);
@@ -56,8 +56,8 @@ public class LoginPage1 {
        course.viewcourse(driver);
         course.editcourse(driver);
        course.moduleoption(driver);
-       course.editmodule(driver);
-       dash.branding(driver);
+      // course.editmodule(driver);
+       customize.branding(driver);
         logout.logout1(driver);
     }
 }

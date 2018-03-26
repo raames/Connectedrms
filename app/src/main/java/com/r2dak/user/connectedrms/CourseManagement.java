@@ -45,11 +45,11 @@ public class CourseManagement {
         WebElement cours1=driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[3]/ul/li[4]/a"));
         cours1.click();
 
-        WebElement optn=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/table/tbody/tr/td[5]/div/button"));
+        WebElement optn=driver.findElement(By.xpath("/html/body/div[1]/main/div/div[2]/div/div/div[2]/table/tbody/tr[1]/td[4]/div/button"));
         optn.click();
         Thread.sleep(2000);
 
-        WebElement courseview=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/table/tbody/tr/td[5]/div/div/a[1]"));
+        WebElement courseview=driver.findElement(By.xpath("/html/body/div[1]/main/div/div[2]/div/div/div[2]/table/tbody/tr[1]/td[4]/div/div/a[1]"));
         courseview.click();
         Thread.sleep(3000);
 
@@ -59,10 +59,10 @@ public class CourseManagement {
     }
 
     public void editcourse(WebDriver driver) throws InterruptedException {
-       WebElement optioncourse=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/table/tbody/tr/td[5]/div/button"));
+       WebElement optioncourse=driver.findElement(By.xpath("/html/body/div[1]/main/div/div[2]/div/div/div[2]/table/tbody/tr[1]/td[4]/div/button"));
        optioncourse.click();
 
-       WebElement courseedit=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/table/tbody/tr[1]/td[5]/div/div/a[2]"));
+       WebElement courseedit=driver.findElement(By.xpath("/html/body/div[1]/main/div/div[2]/div/div/div[2]/table/tbody/tr[1]/td[4]/div/div/a[2]"));
        courseedit.click();
 
        WebElement coursename=driver.findElement(By.xpath("//*[@id=\"name\"]"));
@@ -81,25 +81,25 @@ public class CourseManagement {
 
     public void moduleoption(WebDriver driver) throws InterruptedException {
 
-        WebElement optionmodule=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/table/tbody/tr[1]/td[5]/div/button"));
+        WebElement optionmodule=driver.findElement(By.xpath("/html/body/div[1]/main/div/div[2]/div/div/div[2]/table/tbody/tr[1]/td[4]/div/button"));
         optionmodule.click();
 
         /*WebElement viewmodules=driver.findElement(By.xpath("/[@id=\"app\"]/main/div/div[2]/div/div/div[2]/table/tbody/tr/td[5]/div/button"));
         viewmodules.click();
         Thread.sleep(3000);*/
 
-        WebElement modules=driver.findElement(By.xpath("/*//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/table/tbody/tr/td[5]/div/div/a[3]"));
+        WebElement modules=driver.findElement(By.xpath("/html/body/div[1]/main/div/div[2]/div/div/div[2]/table/tbody/tr[1]/td[4]/div/div/a[3]"));
         modules.click();
         Thread.sleep(2000);
 
-        WebElement addmodules=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[1]/div/div[1]/button"));
+        WebElement addmodules=driver.findElement(By.xpath("//*[@id=\"add_button\"]"));
         addmodules.click();
         Thread.sleep(2000);
 
-        WebElement modulename=driver.findElement(By.xpath("//*[@id=\"name\"]"));
+        WebElement modulename=driver.findElement(By.xpath("//*[@id=\"module_name\"]"));
         modulename.sendKeys("Module001");
 
-        WebElement moduledes=driver.findElement(By.xpath("//*[@id=\"description\"]"));
+        WebElement moduledes=driver.findElement(By.xpath("//*[@id=\"module_description\"]"));
         moduledes.sendKeys("Module1001 Description001");
         Thread.sleep(3000);
 
@@ -110,7 +110,7 @@ public class CourseManagement {
 
     public void editmodule(WebDriver driver) throws InterruptedException {
 
-        WebElement editoption=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[3]/div/div/div[2]/table/tbody/tr/td[4]/div/button"));
+        WebElement editoption=driver.findElement(By.xpath("/html/body/div[1]/main/div/div[2]/div/div/div[2]/table/tbody/tr[1]/td[4]/div/button"));
         editoption.click();
 
         WebElement editmodule1=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/table/tbody/tr/td[4]/div/div/a[2]"));
