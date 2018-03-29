@@ -28,7 +28,7 @@ public class CourseManagement {
 
         WebElement description=driver.findElement(By.xpath("/html/body/div[1]/main/div/div[2]/div/div/div[1]/div/div[2]/div/div/div[2]/form/div[3]/div/div"));
         js.executeScript("CKEDITOR.instances.course_description.setData('This is description')");
-       // description.sendKeys("This is description 101!");
+        // description.sendKeys("This is description 101!");
         Thread.sleep(5000);
 
         // js.executeScript("arguments[0].scrollIntoView();", "/*//*[@id=\"app\"]/main/div[5]/div/div/div[2]/div[2]");
