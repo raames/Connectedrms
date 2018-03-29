@@ -52,10 +52,13 @@ public class LoginPage1 {
         //dash.selfenrolAHQ(driver);
         //dash.view(driver);
         //dash.edit(driver);
-          dash.contacts(driver);
+         // dash.contacts(driver);
+          //dash.delete(driver);
         //user.usermanagement(driver);
         //user.viewuser(driver);
         //user.edituser(driver);
+       // user.admin(driver);
+        user.member(driver);
         // course.coursemanagement(driver);
         // course.viewcourse(driver);
         // course.editcourse(driver);

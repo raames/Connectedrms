@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 /**
  * Created by olive-001 on 3/6/18.
@@ -143,7 +144,7 @@ public class DashboardPage1 {
 
         //click client
 
-        driver.findElement(By.xpath("/html/body/div[1]/header/div/ul/li[3]/ul/li[2]")).click();
+        driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[2]/ul/li[2]/a")).click();
         Thread.sleep(3000);
 
         WebElement optn = driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[1]/td[4]/div/button"));
@@ -170,4 +171,27 @@ public class DashboardPage1 {
 
     }
 
+    public void delete(WebDriver driver) throws InterruptedException {
+
+        //click client
+
+        driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[2]/ul/li[2]/a")).click();
+        Thread.sleep(2000);
+
+        WebElement opt_delete = driver.findElement(By.xpath("/html/body/div[1]/main/div[3]/div/div/div/div[2]/table/tbody/tr[1]/td[4]/div/div/a[6]"));
+        WebElement option = driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[1]/td[4]/div/button"));
+
+        Actions action = new Actions(driver);
+        action.click(option).perform();
+        //you need to release the control from the test
+        action.clickAndHold(opt_delete).release().perform();
+        Thread.sleep(3000);
+
+        //click Delete
+        driver.findElement(By.xpath("/html/body/div[1]/main/div[3]/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/a")).click();
+        Thread.sleep(2000);
+
+
+
+    }
 }

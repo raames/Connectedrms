@@ -81,4 +81,72 @@ public class UserManagement {
         Thread.sleep(10000);
 
     }
+    public void admin(WebDriver driver) throws InterruptedException {
+
+        //click user link
+        driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[2]/ul/li[3]")).click();
+
+
+        WebElement add_admin=driver.findElement(By.xpath("//*[@id=\"add-user\"]"));
+        add_admin.click();
+        Thread.sleep(2000);
+
+        WebElement username=driver.findElement(By.xpath("//*[@id=\"name\"]"));
+        username.sendKeys("Admin1test");
+
+        WebElement emailaddress1=driver.findElement(By.xpath("//*[@id=\"email\"]"));
+        emailaddress1.sendKeys("admin1test@yopmail.com");
+
+        WebElement password=driver.findElement(By.xpath("//*[@id=\"password\"]"));
+        password.sendKeys("password");
+
+        WebElement confirmpassword=driver.findElement(By.xpath("//*[@id=\"password-confirm\"]"));
+        confirmpassword.sendKeys("password");
+
+        driver.findElement(By.xpath("//*[@id=\"is_admin\"]")).click();
+        Thread.sleep(3000);
+
+        WebElement select_org = driver.findElement(By.xpath("//*[@id=\"org_key\"]"));
+        select_org.sendKeys("AHQ");
+        Thread.sleep(5000);
+
+        WebElement submit=driver.findElement(By.xpath("//*[@id=\"AddUser\"]/div/div/div[2]/form/div[7]/div"));
+        submit.click();
+        Thread.sleep(2000);
+    }
+
+    public void member(WebDriver driver) throws InterruptedException {
+
+        //click user link
+        driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[2]/ul/li[3]")).click();
+
+
+        WebElement add_member=driver.findElement(By.xpath("//*[@id=\"add-user\"]"));
+        add_member.click();
+        Thread.sleep(2000);
+
+        WebElement username=driver.findElement(By.xpath("//*[@id=\"name\"]"));
+        username.sendKeys("Member1test");
+
+        WebElement emailaddress1=driver.findElement(By.xpath("//*[@id=\"email\"]"));
+        emailaddress1.sendKeys("mem1test@yopmail.com");
+
+        WebElement password=driver.findElement(By.xpath("//*[@id=\"password\"]"));
+        password.sendKeys("password");
+
+        WebElement confirmpassword=driver.findElement(By.xpath("//*[@id=\"password-confirm\"]"));
+        confirmpassword.sendKeys("password");
+
+        driver.findElement(By.xpath("//*[@id=\"is_member\"]")).click();
+        Thread.sleep(3000);
+
+        WebElement select_org = driver.findElement(By.xpath("//*[@id=\"org_key\"]"));
+        select_org.sendKeys("AHQ");
+        Thread.sleep(5000);
+
+        WebElement submit=driver.findElement(By.xpath("//*[@id=\"AddUser\"]/div/div/div[2]/form/div[7]/div"));
+        submit.click();
+        Thread.sleep(2000);
+    }
+
 }
