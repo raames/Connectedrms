@@ -2,9 +2,12 @@ package com.r2dak.user.connectedrms;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * Created by olive-001 on 3/6/18.
@@ -14,25 +17,58 @@ public class DashboardPage1 {
 
     public void dbpage1(WebDriver driver) throws InterruptedException {
 
-        WebElement clientmanagement = driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[3]/ul/li[2]/a"));
+        WebElement clientmanagement = driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[2]/ul/li[2]/a"));
         clientmanagement.click();
+        Thread.sleep(2000);
 
         WebElement addclient = driver.findElement(By.xpath("//*[@id=\"add-client\"]"));
         addclient.click();
         Thread.sleep(2000);
 
-        WebElement name = driver.findElement(By.xpath("//*[@id=\"name\"]"));
-        name.sendKeys("Oliv Tst12");
+        WebElement name = driver.findElement(By.xpath("//*[@id=\"client_name\"]"));
+        name.sendKeys("Client1 Test");
 
-        WebElement subdomain = driver.findElement(By.xpath("//*[@id=\"sub_domain\"]"));
+        WebElement subdomain = driver.findElement(By.xpath("//*[@id=\"client_domain\"]"));
 
-        subdomain.sendKeys("olii01");
+        subdomain.sendKeys("cnt1");
 
         Thread.sleep(3000);
 
-        WebElement add = driver.findElement(By.xpath("/html/body/div[1]/main/div[2]/div/div/div[2]/form/div[6]/div"));
-        add.click();
-        Thread.sleep(5000);
+        //Fullname text
+        driver.findElement(By.xpath("//*[@id=\"full_name\"]")).sendKeys("Test name");
+
+        //Email address
+        WebElement email = driver.findElement(By.id("email"));
+        email.sendKeys("clienttest@yopmail.com");
+        email.sendKeys(Keys.ENTER);
+        Thread.sleep(2000);
+        //email.sendKeys(Keys.ENTER);
+
+        //Next Button
+//        Actions action = new Actions(driver).doubleClick();
+//        WebElement next1 = driver.findElement(By.xpath("/[@id=\"step-1\"]/form/div/div/div[5]/div/button"));
+//        action.doubleClick(next1).perform();
+        driver.findElement(By.xpath("//*[@id=\"step-1\"]/form/div/div/div[5]/div/button")).click();
+        Thread.sleep(2000);
+
+        //click radiobutton for AHQ subscription
+        driver.findElement(By.xpath("//*[@id=\"new_comp\"]")).click();
+
+
+        //click next
+        driver.findElement(By.xpath("//*[@id=\"step-2\"]/div[2]/form/div/div[4]/div/button[2]")).click();
+
+        //click radiobutton for AHQ subscription
+        WebDriverWait wait = new WebDriverWait(driver, 15);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("//*[@id=\"step-3\"]/div/div/p")));
+
+        //Click Next
+        driver.findElement(By.xpath("//*[@id=\"step-3\"]/div/form/div/div[4]/div/button[1]")).click();
+        Thread.sleep(2000);
+
+        //Click Submit
+        driver.findElement(By.xpath("//*[@id=\"step-4\"]/div/form/div/div[3]/div/button[2]")).click();
+        Thread.sleep(3000);
 
     }
 

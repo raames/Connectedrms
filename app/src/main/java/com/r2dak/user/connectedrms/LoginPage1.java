@@ -46,7 +46,7 @@ public class LoginPage1 {
         loginbutton.click();
         Thread.sleep(5000);
 
-       // dash.dbpage1(driver);
+        dash.dbpage1(driver);
         //dash.RegisterAHQ(driver);
         //dash.selfenrol(driver);
         //dash.selfenrolAHQ(driver);
@@ -58,13 +58,13 @@ public class LoginPage1 {
         //user.viewuser(driver);
         //user.edituser(driver);
        // user.admin(driver);
-        user.member(driver);
+        //user.member(driver);
         // course.coursemanagement(driver);
         // course.viewcourse(driver);
         // course.editcourse(driver);
         // course.moduleoption(driver);
         // course.editmodule(driver);
         // customize.branding(driver);
-        logout.logout1(driver);
+       // logout.logout1(driver);
     }
 }
