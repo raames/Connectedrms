@@ -15,10 +15,10 @@ public class LogoutPage {
         WebElement superadmin=driver.findElement(By.xpath("//*[@id=\"navbarDropdownMenuLink\"]"));
         superadmin.click();
 
-        Thread.sleep(3000);
-        WebElement logoutbtn=driver.findElement(By.xpath("/html/body/div[1]/header/nav/ul/li/div/a[2]"));
+        Thread.sleep(4000);
+        WebElement logoutbtn=driver.findElement(By.xpath("//*[@id=\"app\"]/header/nav/ul/li/div/a[2]"));
         logoutbtn.click();
-        Thread.sleep(2000);
+        Thread.sleep(5000);
 
     }
 }

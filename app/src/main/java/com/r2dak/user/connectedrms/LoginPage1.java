@@ -46,14 +46,12 @@ public class LoginPage1 {
         loginbutton.click();
         Thread.sleep(5000);
 
-        dash.dbpage1(driver);
-        //dash.RegisterAHQ(driver);
-        //dash.selfenrol(driver);
-        //dash.selfenrolAHQ(driver);
-        //dash.view(driver);
-        //dash.edit(driver);
-         // dash.contacts(driver);
-          //dash.delete(driver);
+        //dash.add_client(driver);
+        //dash.option_view(driver);
+        //dash.option_edit(driver);
+        dash.contacts(driver);
+          dash.delete(driver);
+          dash.restore(driver);
         //user.usermanagement(driver);
         //user.viewuser(driver);
         //user.edituser(driver);
@@ -65,6 +63,6 @@ public class LoginPage1 {
         // course.moduleoption(driver);
         // course.editmodule(driver);
         // customize.branding(driver);
-       // logout.logout1(driver);
+        logout.logout1(driver);
     }
 }
