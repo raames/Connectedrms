@@ -49,20 +49,21 @@ public class LoginPage1 {
         //dash.add_client(driver);
         //dash.option_view(driver);
         //dash.option_edit(driver);
-        dash.contacts(driver);
-          dash.delete(driver);
-          dash.restore(driver);
-        //user.usermanagement(driver);
-        //user.viewuser(driver);
-        //user.edituser(driver);
-       // user.admin(driver);
-        //user.member(driver);
+       // dash.contacts(driver);
+        //  dash.delete(driver);
+        //  dash.restore(driver);
+       // user.create_admin(driver);
+        //user.create_member(driver);
+        user.view_user(driver);
+        user.edituser(driver);
+        user.delete(driver);
+        user.restore(driver);
         // course.coursemanagement(driver);
         // course.viewcourse(driver);
         // course.editcourse(driver);
         // course.moduleoption(driver);
         // course.editmodule(driver);
         // customize.branding(driver);
-        logout.logout1(driver);
+        //logout.logout1(driver);
     }
 }
