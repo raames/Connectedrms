@@ -30,18 +30,18 @@ public class DashboardPage1 {
         Thread.sleep(2000);
 
         WebElement name = driver.findElement(By.xpath("//*[@id=\"client_name\"]"));
-        name.sendKeys("Client1 Test");
+        name.sendKeys("Selenium5 00 Test");
 
         WebElement subdomain = driver.findElement(By.xpath("//*[@id=\"client_domain\"]"));
-        subdomain.sendKeys("cnt1");
+        subdomain.sendKeys("s5t00");
         Thread.sleep(3000);
 
         //Fullname text
-        driver.findElement(By.xpath("//*[@id=\"full_name\"]")).sendKeys("Test name");
+        driver.findElement(By.xpath("//*[@id=\"full_name\"]")).sendKeys("Selenium5 00 Test");
 
         //Email address
         WebElement email = driver.findElement(By.id("email"));
-        email.sendKeys("clienttest@yopmail.com");
+        email.sendKeys("s5t00@g.com");
         email.sendKeys(Keys.ENTER);
         Thread.sleep(2000);
         //email.sendKeys(Keys.ENTER);
@@ -75,16 +75,14 @@ public class DashboardPage1 {
     }
 
     public void option_view(WebDriver driver) throws InterruptedException {
-
-        WebElement clientmanagement = driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[2]/ul/li[2]/a"));
-        clientmanagement.click();
+//        WebElement clientmanagement = driver.findElement(By.xpath("/[@id=\"slide-out\"]/ul/li[2]/ul/li[2]/a"));
+//        clientmanagement.click();
         Thread.sleep(2000);
-
         WebElement optn = driver.findElement(By.xpath("/html/body/div[1]/main/div[3]/div/div/div/div[2]/table/tbody/tr[1]/td[4]/div/button"));
         WebElement option_view = driver.findElement(By.xpath("/html/body/div[1]/main/div[3]/div/div/div/div[2]/table/tbody/tr[1]/td[4]/div/div/a[1]"));
         action = new Actions(driver);
         action.click(optn).perform();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         //you need to release the control from the test
         action.clickAndHold(option_view).release().perform();
         Thread.sleep(2000);
@@ -93,7 +91,7 @@ public class DashboardPage1 {
         driver.findElement(By.xpath("/html/body/div[1]/main/div[3]/div/div/div[1]/div/div/div/div[2]/div[2]/div/a[3]")).click();
         Thread.sleep(2000);
         driver.navigate().back();
-
+        Thread.sleep(2000);
         //Click Courses
         driver.findElement(By.xpath("/html/body/div[1]/main/div[3]/div/div/div[1]/div/div/div/div[2]/div[2]/div/a[2]")).click();
         //Search Course
@@ -116,6 +114,12 @@ public class DashboardPage1 {
         //Set Prices for gbp
         driver.findElement(By.name("currency[]")).click();
 
+        WebElement gbp_price = driver.findElement(By.name("GBP_amount"));
+        gbp_price.sendKeys("10");
+
+        WebElement gbp_vat = driver.findElement(By.name("GBP_vat"));
+        gbp_vat.sendKeys("10");
+
         //Click submit
         driver.findElement(By.cssSelector("input.btn")).click();
 
@@ -125,7 +129,7 @@ public class DashboardPage1 {
 
     }
 
-    public void option_edit(WebDriver driver) throws InterruptedException {
+    public void client_edit(WebDriver driver) throws InterruptedException {
         //click client
         driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[2]/ul/li[2]/a")).click();
 
@@ -142,12 +146,12 @@ public class DashboardPage1 {
         WebElement edit_name = driver.findElement(By.name("client_name"));
         edit_name.clear();
         Thread.sleep(2000);
-        edit_name.sendKeys("Client1 Test1");
+        edit_name.sendKeys("edit Selenium5 00 Test");
 
         WebElement edit_subdomain = driver.findElement(By.name("client_domain"));
         edit_subdomain.clear();
         Thread.sleep(2000);
-        edit_subdomain.sendKeys("cnt1");
+        edit_subdomain.sendKeys("es5t00");
 
         WebElement self_enrol = driver.findElement(By.name("only_selfenrol"));
         self_enrol.click();
@@ -161,10 +165,10 @@ public class DashboardPage1 {
     public void bundles(WebDriver driver) throws InterruptedException {
 
         //click client
-        driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[2]/ul/li[2]/a")).click();
+        //driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[2]/ul/li[2]/a")).click();
 
         WebElement optn = driver.findElement(By.xpath("/html/body/div[1]/main/div[3]/div/div/div/div[2]/table/tbody/tr[1]/td[4]/div/button"));
-        WebElement bundle = driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[1]/td[4]/div/div/a[4]"));
+        WebElement bundle = driver.findElement(By.xpath("/html/body/div[1]/main/div[3]/div/div/div/div[2]/table/tbody/tr[1]/td[4]/div/div/a[5]"));
 
         action = new Actions(driver);
         action.click(optn).perform();
@@ -175,15 +179,16 @@ public class DashboardPage1 {
 
         WebElement search_bundle = driver.findElement(By.name("search"));
         search_bundle.sendKeys("con-80");
+        search_bundle.sendKeys(Keys.ENTER);
         Thread.sleep(5000);
 
-        WebElement add_bundle = driver.findElement(By.xpath("//*[@id=\"app\"]/main/div[2]/div/div/div[1]/div[2]/div/a/div/div[2]/i"));
+        WebElement add_bundle = driver.findElement(By.xpath("/html/body/div[1]/main/div[2]/div/div/div[1]/div[2]/div/a/div/div[2]/i"));
         add_bundle.click();
 
         //click radio button of bundle
         driver.findElement(By.name("is_default")).click();
 
-        WebElement submit = driver.findElement(By.xpath("//*[@id=\"8ab67c12-51a2-49b3-a2e5-27e5356f824cadd\"]/div/div/div[2]/div/form/div[2]/div/input"));
+        WebElement submit = driver.findElement(By.xpath("/html/body/div[1]/main/div[2]/div/div/div[1]/div[2]/div/div[1]/div/div/div[2]/div/form/div[2]/div/input"));
         submit.click();
 
     }
@@ -192,9 +197,10 @@ public class DashboardPage1 {
 
         //click client
         driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[2]/ul/li[2]/a")).click();
-        Thread.sleep(2000);
+        Thread.sleep(5000);
+
         WebElement optn = driver.findElement(By.xpath("/html/body/div[1]/main/div[3]/div/div/div/div[2]/table/tbody/tr[1]/td[4]/div/button"));
-        WebElement contact = driver.findElement(By.xpath("//*[@id=\"contact_8ad26a2a-2d59-410f-8313-7024ac9f95c5\"]"));
+        WebElement contact = driver.findElement(By.xpath("//*[@id=\"contact_8afc9e8c-2679-42dd-a28a-4055d9536a83\"]"));
 
         action = new Actions(driver);
         action.click(optn).perform();
@@ -221,11 +227,11 @@ public class DashboardPage1 {
     public void delete(WebDriver driver) throws InterruptedException {
 
         //click client
-        driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[2]/ul/li[2]/a")).click();
-        Thread.sleep(2000);
+        //driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[2]/ul/li[2]/a")).click();
+
 
         WebElement optn = driver.findElement(By.xpath("/html/body/div[1]/main/div[3]/div/div/div/div[2]/table/tbody/tr[1]/td[4]/div/button"));
-        WebElement delete = driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[1]/td[4]/div/div/a[7]"));
+        WebElement delete = driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[1]/td[4]/div/div/a[8]"));
 
         action = new Actions(driver);
         action.click(optn).perform();
@@ -235,14 +241,14 @@ public class DashboardPage1 {
         Thread.sleep(3000);
 
         //click modal box Delete
-        driver.findElement(By.xpath("//*[@id=\"8ad26a2a-2d59-410f-8313-7024ac9f95c5\"]/div/div/div[2]/div[2]/a")).click();
+        driver.findElement(By.xpath("//*[@id=\"8afc9e8c-2679-42dd-a28a-4055d9536a83\"]/div/div/div[2]/div[2]/a")).click();
         Thread.sleep(5000);
 
     }
     public void restore(WebDriver driver) throws InterruptedException {
-        WebElement restore_option = driver.findElement(By.xpath("/html/body/div[1]/main/div[3]/div/div/div/div[3]/table/tbody/tr[1]/td[4]/div/button"));
 
-        WebElement restore = driver.findElement(By.xpath("/html/body/div[1]/main/div[3]/div/div/div/div[3]/table/tbody/tr[1]/td[4]/div/div/a"));
+        WebElement restore_option = driver.findElement(By.xpath("/html/body/div[1]/main/div[3]/div/div/div/div[2]/table/tbody/tr[1]/td[4]/div/button"));
+        WebElement restore = driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[1]/td[4]/div/div/a"));
 
         action = new Actions(driver);
         action.click(restore_option).perform();

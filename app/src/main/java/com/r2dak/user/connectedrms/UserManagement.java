@@ -25,10 +25,10 @@ public class UserManagement {
         Thread.sleep(2000);
 
         WebElement username=driver.findElement(By.xpath("//*[@id=\"name\"]"));
-        username.sendKeys("User Test");
+        username.sendKeys("Selenium5 Test00");
 
         WebElement emailaddress1=driver.findElement(By.xpath("//*[@id=\"email\"]"));
-        emailaddress1.sendKeys("usertest@yopmail.com");
+        emailaddress1.sendKeys("adminsel500@g.com");
 
         WebElement password=driver.findElement(By.xpath("//*[@id=\"password\"]"));
         password.sendKeys("password");
@@ -41,7 +41,7 @@ public class UserManagement {
         driver.findElement(By.xpath("//*[@id=\"is_admin\"]")).click();
 
         WebElement search_org = driver.findElement(By.xpath("//*[@id=\"org_key\"]"));
-        search_org.sendKeys("Client1 Test1");
+        search_org.sendKeys("Selenium5 00 Test");
         search_org.sendKeys(Keys.ENTER);
         Thread.sleep(2000);
 
@@ -53,17 +53,17 @@ public class UserManagement {
     public void create_member(WebDriver driver) throws InterruptedException {
 
         //click user link
-        driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[2]/ul/li[3]")).click();
+     //   driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[2]/ul/li[3]")).click();
 
         WebElement add_member=driver.findElement(By.xpath("//*[@id=\"add-user\"]"));
         add_member.click();
         Thread.sleep(2000);
 
         WebElement username=driver.findElement(By.xpath("//*[@id=\"name\"]"));
-        username.sendKeys("Member1test");
+        username.sendKeys("memsel500");
 
         WebElement emailaddress1=driver.findElement(By.xpath("//*[@id=\"email\"]"));
-        emailaddress1.sendKeys("mem1st@yopmail.com");
+        emailaddress1.sendKeys("memsel500@ga.com");
 
         WebElement password=driver.findElement(By.xpath("//*[@id=\"password\"]"));
         password.sendKeys("password");
@@ -76,7 +76,7 @@ public class UserManagement {
         Thread.sleep(3000);
 
         WebElement select_org = driver.findElement(By.xpath("//*[@id=\"org_key\"]"));
-        select_org.sendKeys("Client1 Test1");
+        select_org.sendKeys("Selenium5 00 Test");
         select_org.sendKeys(Keys.ENTER);
         Thread.sleep(3000);
 
@@ -97,7 +97,7 @@ public class UserManagement {
         Thread.sleep(3000);
         //you need to release the control from the test
         action.clickAndHold(optn_view).release().perform();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         WebElement edit_user=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div[3]/div/div/div/div/div/div/div[2]/div[2]/div/a[2]"));
         edit_user.click();
@@ -113,7 +113,9 @@ public class UserManagement {
         driver.findElement(By.xpath("//*[@id=\"password-confirm\"]")).sendKeys("secret");
         Thread.sleep(3000);
 
+        //change modal psw button
         driver.findElement(By.xpath("//*[@id=\"change_psw_modal\"]/div/div/div[2]/div/a")).click();
+        //driver.navigate().back();
 
 
         /*WebElement edituser1=driver.findElement(By.xpath("/*//*[@id=\"name\"]"));
@@ -133,7 +135,7 @@ public class UserManagement {
     public void edituser (WebDriver driver) throws InterruptedException {
 
         //click user link
-        driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[2]/ul/li[3]/a")).click();
+       // driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[2]/ul/li[3]/a")).click();
 
         WebElement optn=driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[1]/td[5]/div/button"));
         WebElement optn_edit=driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[1]/td[5]/div/div/a[3]"));
@@ -147,11 +149,11 @@ public class UserManagement {
 
         WebElement edituser=driver.findElement(By.xpath("//*[@id=\"name\"]"));
         edituser.clear();
-        edituser.sendKeys("Tester");
+        edituser.sendKeys("eduser00");
 
         WebElement editemail=driver.findElement(By.xpath("//*[@id=\"email\"]"));
         editemail.clear();
-        editemail.sendKeys("terter@g.com");
+        editemail.sendKeys("eduser00@g.com");
         Thread.sleep(3000);
 
         WebElement savebutton=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/form/div[3]/div[2]/div/input"));
@@ -159,6 +161,9 @@ public class UserManagement {
         Thread.sleep(5000);
     }
     public void delete(WebDriver driver) throws InterruptedException {
+
+        //click user link
+         driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[2]/ul/li[3]/a")).click();
 
         WebElement optn=driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[1]/td[5]/div/button"));
         WebElement delete = driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[1]/td[5]/div/div/a[4]"));
@@ -171,7 +176,7 @@ public class UserManagement {
         Thread.sleep(3000);
 
         //click modal box Delete
-        driver.findElement(By.xpath("//*[@id=\"8ad46f21-4853-464c-b511-c45855049c68\"]/div/div/div[2]/div[2]/a")).click();
+        driver.findElement(By.xpath("/html/body/div[1]/main/div[3]/div/div/div/div[2]/div[1]/div/div/div[2]/div[2]/a")).click();
         Thread.sleep(5000);
 
     }

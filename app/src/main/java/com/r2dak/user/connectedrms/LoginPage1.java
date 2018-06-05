@@ -17,6 +17,7 @@ public class LoginPage1 {
     public DashboardPage1 dash=new DashboardPage1();
     public UserManagement user=new UserManagement();
     public CourseManagement course=new CourseManagement();
+    public Bundles bundle = new Bundles();
     public Client_Customization customize = new Client_Customization();
     public LogoutPage logout=new LogoutPage();
 
@@ -48,22 +49,29 @@ public class LoginPage1 {
 
         //dash.add_client(driver);
         //dash.option_view(driver);
-        //dash.option_edit(driver);
-       // dash.contacts(driver);
-        //  dash.delete(driver);
-        //  dash.restore(driver);
-       // user.create_admin(driver);
-        //user.create_member(driver);
+        //dash.client_edit(driver);
+        //dash.bundles(driver);
+        dash.contacts(driver);
+          dash.delete(driver);
+          dash.restore(driver);
+        user.create_admin(driver);
+        user.create_member(driver);
         user.view_user(driver);
         user.edituser(driver);
         user.delete(driver);
         user.restore(driver);
-        // course.coursemanagement(driver);
-        // course.viewcourse(driver);
-        // course.editcourse(driver);
-        // course.moduleoption(driver);
+         course.search_course(driver);
+         course.editcourse(driver);
+        course.option_module(driver);
+        course.module_unit(driver);
+        course.unit_delete(driver);
+        course.unit_restore(driver);
+        bundle.bundles_view(driver);
+        bundle.make_mandatory(driver);
+        bundle.bundle_delete(driver);
+        bundle.bundle_restore(driver);
         // course.editmodule(driver);
         // customize.branding(driver);
-        //logout.logout1(driver);
+        logout.logout1(driver);
     }
 }
