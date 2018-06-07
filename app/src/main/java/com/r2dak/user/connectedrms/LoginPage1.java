@@ -19,6 +19,7 @@ public class LoginPage1 {
     public CourseManagement course=new CourseManagement();
     public Bundles bundle = new Bundles();
     public Client_Customization customize = new Client_Customization();
+    public Subscription_Packages subscription = new Subscription_Packages();
     public LogoutPage logout=new LogoutPage();
 
     public LoginPage1() throws AWTException {
@@ -46,22 +47,21 @@ public class LoginPage1 {
         WebElement loginbutton=driver.findElement(By.xpath("/html/body/div[2]/form/div[3]/input"));
         loginbutton.click();
         Thread.sleep(5000);
-
-        //dash.add_client(driver);
-        //dash.option_view(driver);
-        //dash.client_edit(driver);
-        //dash.bundles(driver);
+        dash.add_client(driver);
+        dash.option_view(driver);
+        dash.client_edit(driver);
+        dash.bundles(driver);
         dash.contacts(driver);
-          dash.delete(driver);
-          dash.restore(driver);
+        dash.delete(driver);
+        dash.restore(driver);
         user.create_admin(driver);
         user.create_member(driver);
         user.view_user(driver);
         user.edituser(driver);
         user.delete(driver);
         user.restore(driver);
-         course.search_course(driver);
-         course.editcourse(driver);
+        course.search_course(driver);
+        course.editcourse(driver);
         course.option_module(driver);
         course.module_unit(driver);
         course.unit_delete(driver);
@@ -72,6 +72,13 @@ public class LoginPage1 {
         bundle.bundle_restore(driver);
         // course.editmodule(driver);
         // customize.branding(driver);
+        subscription.add_package(driver);
+        subscription.actions_view(driver);
+        subscription.manage_course(driver);
+        subscription.manage_bundle(driver);
+        subscription.sub_delete(driver);
+        subscription.restore(driver);
+        dash.subscription(driver);
         logout.logout1(driver);
     }
 }

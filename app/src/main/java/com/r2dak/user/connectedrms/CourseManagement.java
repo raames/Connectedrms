@@ -25,7 +25,7 @@ public class CourseManagement {
 
         WebElement search=driver.findElement(By.xpath("//*[@id=\"form-search\"]/input"));
         search.click();
-        search.sendKeys("tru5");
+        search.sendKeys("coursa test");
         Thread.sleep(2000);
         search.sendKeys(Keys.ENTER);
         Thread.sleep(3000);
@@ -107,10 +107,10 @@ public class CourseManagement {
         driver.findElement(By.xpath("//*[@id=\"add_button\"]")).click();
 
         WebElement modulename=driver.findElement(By.xpath("//*[@id=\"module_name\"]"));
-        modulename.sendKeys("Module001");
+        modulename.sendKeys("Module 001 test");
 
         WebElement module_des=driver.findElement(By.xpath("//*[@id=\"module_description\"]"));
-        module_des.sendKeys("Module1001 Description001");
+        module_des.sendKeys("Module 001 test Description001");
         Thread.sleep(3000);
 
         WebElement add=driver.findElement(By.xpath("//*[@id=\"addmodule\"]/div/div/div[2]/form/div[3]/button"));
@@ -133,12 +133,11 @@ public class CourseManagement {
 
         WebElement unit_name = driver.findElement(By.id("unit_name"));
         unit_name.clear();
-        unit_name.sendKeys("Selenium Test");
+        unit_name.sendKeys("Automate module unit Test");
 
         WebElement unit_desc = driver.findElement(By.id("unit_description"));
         unit_desc.clear();
-        unit_desc.sendKeys("Many, perhaps most, software applications today are written as web-based applications to be run in an Internet browser." +
-                "The effectiveness of testing these applications varies widely among companies and organizations.");
+        unit_desc.sendKeys("The effectiveness of testing these applications varies widely among companies and organizations.");
         Thread.sleep(2000);
 
         //click save unit
