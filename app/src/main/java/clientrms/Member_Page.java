@@ -6,24 +6,27 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import javax.xml.transform.sax.TemplatesHandler;
-
 /**
  * Created by olive-001 on 6/7/18.
  */
 
 public class Member_Page {
 
-    public void memberpage (WebDriver driver) throws InterruptedException {
 
-        //Click on member '>'
-        WebElement member001=driver.findElement(By.xpath("//*[@id=\"sidebar-right\"]/aside/div[2]/div[1]/a/i"));
-        member001.click();
+    public void memberpage (WebDriver driver) throws InterruptedException {
+        JavascriptExecutor jse = (JavascriptExecutor)driver;
+        jse.executeScript("window.scrollTo(0,document.body.scrollHeight)", "");
+       // jse.executeScript("arguments[0].scrollIntoView(true)","See More Members");
+        Thread.sleep(5000);
+
+        //Click on see more member
+        WebElement see_member=driver.findElement(By.xpath("/html/body/main/div/div[1]/div[3]/div/aside/div[2]/div[2]/a"));
+        see_member.click();
         Thread.sleep(5000);
 
         WebElement search_member=driver.findElement(By.xpath("//*[@id=\"main-content\"]/div[2]/div/div/div[2]/div/div[1]/form/input"));
         search_member.click();
-        search_member.sendKeys("con81 m1 test");
+        search_member.sendKeys("con81 m4 test");
         Thread.sleep(5000);
         search_member.sendKeys(Keys.ENTER);
         Thread.sleep(5000);
@@ -36,7 +39,6 @@ public class Member_Page {
         click_viewcourse.click();
         Thread.sleep(5000);
 
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("window.scrollBy(0,250)", "");
         Thread.sleep(5000);
 
@@ -76,8 +78,7 @@ public class Member_Page {
         click_viewcourse1.click();
         Thread.sleep(5000);
 
-        JavascriptExecutor jse1 = (JavascriptExecutor)driver;
-        jse1.executeScript("window.scrollBy(0,250)", "");
+        jse.executeScript("window.scrollBy(0,250)", "");
         Thread.sleep(5000);
 
         driver.findElement(By.xpath("//*[@id=\"main-content\"]/div/div/div[1]/div[2]/div[2]/form/input")).click();

@@ -25,6 +25,7 @@ public class Admin_LoginPage {
 
         System.getProperty("webdriver.gecko.driver", "//usr/bin//geckodriver");
         WebDriver driver = new FirefoxDriver();
+        driver.manage().window().maximize();
         driver.get("http://www.sandbox.connectedrms.com/");         //site open
         Thread.sleep(3000);
 
@@ -43,12 +44,13 @@ public class Admin_LoginPage {
         loginbutton.click();
         Thread.sleep(10000);
 
-        //licensed_coursePage.licensedcoursebtn(driver);
+        licensed_coursePage.licensedcoursebtn(driver);
         licensed_coursePage.dash_licensedcourses(driver);
+        //licensed_coursePage.test(driver);
         //recommended_coursePage.recommendcourse(driver);
-        //member_page.memberpage(driver);
-        //postNews_page.postnews_page(driver);
-        //client_logoutPage.clientlogout(driver);
+        member_page.memberpage(driver);
+        postNews_page.postnews_page(driver);
+        client_logoutPage.clientlogout(driver);
 
     }
 }
