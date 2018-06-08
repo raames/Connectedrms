@@ -43,7 +43,8 @@ public class Admin_LoginPage {
         loginbutton.click();
         Thread.sleep(10000);
 
-        licensed_coursePage.licensedcoursebtn(driver);
+        //licensed_coursePage.licensedcoursebtn(driver);
+        licensed_coursePage.dash_licensedcourses(driver);
         //recommended_coursePage.recommendcourse(driver);
         //member_page.memberpage(driver);
         //postNews_page.postnews_page(driver);
