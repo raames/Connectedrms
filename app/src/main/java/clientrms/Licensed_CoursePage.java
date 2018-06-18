@@ -20,21 +20,21 @@ public class Licensed_CoursePage {
 
         WebElement enrollbtn=driver.findElement(By.xpath("//*[@id=\"btn-enrol\"]"));
         enrollbtn.click();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         /*driver.findElement(By.xpath("/html/body/main/div[3]/div/div/div[1]/button")).click();
         Thread.sleep(2000);*/
 
         WebElement memberclick=driver.findElement(By.xpath("//*[@id=\"title\"]/div[2]/a[1]/div/div[2]/h3"));
         memberclick.click();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
 
         //click confirm
         driver.findElement(By.xpath("//*[@id=\"enroll_confirmation\"]/div/div/div/div[2]/button[2]")).click();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
 
         //enrolment exist ok button
         driver.findElement(By.xpath("//*[@id=\"enroll_confirmation\"]/div/div/div/div[2]/button")).click();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
 
         //click on search
        // driver.findElement(By.xpath("//*[@id=\"enrollment_ko_laagi_member_search_form\"]/input")).click();
@@ -42,11 +42,11 @@ public class Licensed_CoursePage {
         WebElement search_member=driver.findElement(By.xpath("//*[@id=\"enrollment_ko_laagi_member_search_form\"]/input"));
         search_member.sendKeys("con81 m6 test");
         search_member.sendKeys(Keys.ENTER);
-        Thread.sleep(3000);
+        Thread.sleep(5000);
 
         WebElement enrol_member=driver.findElement(By.xpath("//*[@id=\"title\"]/div[2]/a[1]/div/div[2]/span"));
         enrol_member.click();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
 
         //click on confirm
         driver.findElement(By.xpath("//*[@id=\"enroll_confirmation\"]/div/div/div/div[2]/button[2]")).click();
@@ -62,16 +62,18 @@ public class Licensed_CoursePage {
         //click on view
         WebElement clk_view=driver.findElement(By.linkText("View"));
         clk_view.click();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
 
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("window.scrollTo(0,document.body.scrollHeight)", "");
-        Thread.sleep(4000);
+        Thread.sleep(5000);
         jse.executeScript("window.scrollTo(document.body.scrollHeight,0)", "");
        // jse.executeScript("window.scrollBy(0,-300)", "");
-        Thread.sleep(4000);
+        Thread.sleep(5000);
 
-        driver.findElement(By.xpath("/html/body/header/div/div/div[2]/ul/li[1]/a")).click();
+        //click feed link
+        driver.findElement(By.xpath("/html/body/header/div[2]/div/div/div[2]/ul/li[1]/a")).click();
+        Thread.sleep(5000);
 
     }
     public void dash_licensedcourses(WebDriver driver) throws InterruptedException {
@@ -88,7 +90,7 @@ public class Licensed_CoursePage {
 
         WebElement dashenrol_member=driver.findElement(By.xpath("/html/body/main/div/div[3]/div/div/div[2]/div[2]/a/div/div[2]/h3"));
         dashenrol_member.click();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
 
         //click on dashboard confirm
         driver.findElement(By.xpath("/html/body/main/div/div[4]/div/div/div/div[2]/button[2]")).click();
@@ -100,14 +102,14 @@ public class Licensed_CoursePage {
 
         //click on close
         driver.findElement(By.xpath("/html/body/main/div/div[3]/div/div/div[1]/button")).click();
-        Thread.sleep(3000);
-
+        Thread.sleep(5000);
 
         //click on view
         WebElement dash_view=driver.findElement(By.xpath("//*[@id=\"btn-view\"]"));
         dash_view.click();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
 
+        //close view modal box
         driver.findElement(By.xpath("//*[@id=\"course_view_modal\"]/div/div/div[1]/button")).click();
 
       /*  //search members
@@ -169,16 +171,16 @@ driver.findElement(By.xpath("//*[@id=\"btn-enrol\"]")).click();
         Thread.sleep(4000);
 
         JavascriptExecutor jse2 = (JavascriptExecutor)driver;
-        jse2.executeScript("window.scrollBy(0,300)", "");
+        jse2.executeScript("window.scrollBy(0,document.body.scrollHeight)", "");
         Thread.sleep(3000);
 
         WebElement search_enrol_member = driver.findElement(By.xpath("/html/body/main/div/div/div[1]/div[2]/div[2]/form/input"));
         search_enrol_member.sendKeys("con81 m3 test");
-        jse2.executeScript("window.scrollBy(0,-300)", "");
+        jse2.executeScript("window.scrollBy(document.body.scrollHeight,0)", "");
         Thread.sleep(3000);
 
         //click feed link
-        driver.findElement(By.xpath("/html/body/header/div/div/div[2]/ul/li[1]/a")).click();
+        driver.findElement(By.xpath("/html/body/header/div[2]/div/div/div[2]/ul/li[1]/a")).click();
         Thread.sleep(5000);
     }
 }

@@ -25,10 +25,10 @@ public class UserManagement {
         Thread.sleep(2000);
 
         WebElement username=driver.findElement(By.xpath("//*[@id=\"name\"]"));
-        username.sendKeys("Adminaut13 Test");
+        username.sendKeys("Adminaut15 Test");
 
         WebElement emailaddress1=driver.findElement(By.xpath("//*[@id=\"email\"]"));
-        emailaddress1.sendKeys("adminaut13@yopmail.com");
+        emailaddress1.sendKeys("adminaut15@yopmail.com");
 
         WebElement password=driver.findElement(By.xpath("//*[@id=\"password\"]"));
         password.sendKeys("password");
@@ -41,7 +41,7 @@ public class UserManagement {
         driver.findElement(By.xpath("//*[@id=\"is_admin\"]")).click();
 
         WebElement search_org = driver.findElement(By.xpath("//*[@id=\"org_key\"]"));
-        search_org.sendKeys("EAutomation13 Test");
+        search_org.sendKeys("EAutomation15 Test");
         search_org.sendKeys(Keys.ENTER);
         Thread.sleep(2000);
 
@@ -62,10 +62,10 @@ public class UserManagement {
         Thread.sleep(2000);
 
         WebElement username=driver.findElement(By.xpath("//*[@id=\"name\"]"));
-        username.sendKeys("maut13 Test");
+        username.sendKeys("maut15 Test");
 
         WebElement emailaddress1=driver.findElement(By.xpath("//*[@id=\"email\"]"));
-        emailaddress1.sendKeys("maut13@yopmail.com");
+        emailaddress1.sendKeys("maut15@yopmail.com");
 
         WebElement password=driver.findElement(By.xpath("//*[@id=\"password\"]"));
         password.sendKeys("password");
@@ -78,7 +78,7 @@ public class UserManagement {
         Thread.sleep(3000);
 
         WebElement select_org = driver.findElement(By.xpath("//*[@id=\"org_key\"]"));
-        select_org.sendKeys("EAutomation13 Test");
+        select_org.sendKeys("EAutomation15 Test");
         select_org.sendKeys(Keys.ENTER);
         Thread.sleep(3000);
 
@@ -152,11 +152,11 @@ public class UserManagement {
 
         WebElement edituser=driver.findElement(By.xpath("//*[@id=\"name\"]"));
         edituser.clear();
-        edituser.sendKeys("editmaut13");
+        edituser.sendKeys("editmaut15");
 
         WebElement editemail=driver.findElement(By.xpath("//*[@id=\"email\"]"));
         editemail.clear();
-        editemail.sendKeys("editmaut13@yopmail.com");
+        editemail.sendKeys("editmaut15@yopmail.com");
         Thread.sleep(3000);
 
         WebElement savebutton=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/form/div[3]/div[2]/div/input"));

@@ -107,10 +107,10 @@ public class CourseManagement {
         driver.findElement(By.xpath("//*[@id=\"add_button\"]")).click();
 
         WebElement modulename=driver.findElement(By.xpath("//*[@id=\"module_name\"]"));
-        modulename.sendKeys("Module 001 test");
+        modulename.sendKeys("Module j18 test");
 
         WebElement module_des=driver.findElement(By.xpath("//*[@id=\"module_description\"]"));
-        module_des.sendKeys("Module 001 test Description001");
+        module_des.sendKeys("Module j18 test Description001");
         Thread.sleep(3000);
 
         WebElement add=driver.findElement(By.xpath("//*[@id=\"addmodule\"]/div/div/div[2]/form/div[3]/button"));
@@ -133,7 +133,7 @@ public class CourseManagement {
 
         WebElement unit_name = driver.findElement(By.id("unit_name"));
         unit_name.clear();
-        unit_name.sendKeys("Automate module unit Test");
+        unit_name.sendKeys("Automate module j18unit Test");
 
         WebElement unit_desc = driver.findElement(By.id("unit_description"));
         unit_desc.clear();

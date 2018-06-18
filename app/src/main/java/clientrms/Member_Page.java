@@ -20,7 +20,7 @@ public class Member_Page {
         Thread.sleep(5000);
 
         //Click on see more member
-        WebElement see_member=driver.findElement(By.xpath("/html/body/main/div/div[1]/div[3]/div/aside/div[2]/div[2]/a"));
+        WebElement see_member=driver.findElement(By.xpath("/html/body/main/div/div[1]/div[3]/aside/div[2]/div[2]/a"));
         see_member.click();
         Thread.sleep(5000);
 
@@ -39,16 +39,14 @@ public class Member_Page {
         click_viewcourse.click();
         Thread.sleep(5000);
 
-        jse.executeScript("window.scrollBy(0,250)", "");
+        jse.executeScript("window.scrollBy(0,document.body.scrollHeight)", "");
         Thread.sleep(5000);
-
-        driver.findElement(By.xpath("//*[@id=\"main-content\"]/div/div/div[1]/div[2]/div[2]/form/input")).click();
 
         WebElement search_membr=driver.findElement(By.xpath("//*[@id=\"main-content\"]/div/div/div[1]/div[2]/div[2]/form/input"));
         search_membr.sendKeys("con81 m1 test");
         Thread.sleep(5000);
 
-        jse.executeScript("window.scrollBy(0,-250)", "");
+        jse.executeScript("window.scrollBy(document.body.scrollHeight,0)", "");
         Thread.sleep(5000);
         driver.navigate().back();
         Thread.sleep(5000);
@@ -68,31 +66,32 @@ public class Member_Page {
         click_selectedenroll.click();
         Thread.sleep(5000);
 
+        //click modal box enrol license course
         driver.findElement(By.xpath("//*[@id=\"enroll_confirmation\"]/div/div/div/div[2]/button[2]")).click();
         Thread.sleep(5000);
 
+        //click enrol confirmation
         driver.findElement(By.xpath("//*[@id=\"enroll_confirmation\"]/div/div/div/div[2]/button")).click();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
 
         WebElement click_viewcourse1=driver.findElement(By.xpath("//*[@id=\"title\"]/div[2]/div/div[3]/a"));
         click_viewcourse1.click();
         Thread.sleep(5000);
 
-        jse.executeScript("window.scrollBy(0,250)", "");
+        jse.executeScript("window.scrollBy(0,document.body.scrollHeight)", "");
         Thread.sleep(5000);
-
-        driver.findElement(By.xpath("//*[@id=\"main-content\"]/div/div/div[1]/div[2]/div[2]/form/input")).click();
 
         WebElement search_membr1=driver.findElement(By.xpath("//*[@id=\"main-content\"]/div/div/div[1]/div[2]/div[2]/form/input"));
         search_membr1.sendKeys("con81 m11 test");
         Thread.sleep(5000);
 
-        jse.executeScript("window.scrollBy(0,-250)", "");
+        jse.executeScript("window.scrollBy(document.body.scrollHeight,0)", "");
         Thread.sleep(5000);
         driver.navigate().back();
         Thread.sleep(5000);
 
-        driver.findElement(By.xpath("/html/body/header/div/div/div[1]/div/a[2]/img")).click();
+        //click feed
+        driver.findElement(By.xpath("/html/body/header/div[2]/div/div/div[2]/ul/li[1]/a")).click();
         Thread.sleep(5000);
     }
 }

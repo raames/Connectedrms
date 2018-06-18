@@ -30,18 +30,18 @@ public class DashboardPage1 {
         Thread.sleep(2000);
 
         WebElement name = driver.findElement(By.xpath("//*[@id=\"client_name\"]"));
-        name.sendKeys("Automation13 Test");
+        name.sendKeys("Automation15 Test");
 
         WebElement subdomain = driver.findElement(By.xpath("//*[@id=\"client_domain\"]"));
-        subdomain.sendKeys("aut13");
+        subdomain.sendKeys("aut15");
         Thread.sleep(3000);
 
         //Fullname text
-        driver.findElement(By.xpath("//*[@id=\"full_name\"]")).sendKeys("Automation13 name test");
+        driver.findElement(By.xpath("//*[@id=\"full_name\"]")).sendKeys("Automation15 name test");
 
         //Email address
         WebElement email = driver.findElement(By.id("email"));
-        email.sendKeys("aut13@yopmail.com");
+        email.sendKeys("aut15@yopmail.com");
         email.sendKeys(Keys.ENTER);
         Thread.sleep(2000);
         //email.sendKeys(Keys.ENTER);
@@ -54,17 +54,22 @@ public class DashboardPage1 {
         driver.findElement(By.xpath("//*[@id=\"new_comp\"]")).click();
 
         //click next
-        driver.findElement(By.xpath("//*[@id=\"step-2\"]/div[2]/form/div/div[4]/div/button[2]")).click();
+        driver.findElement(By.xpath("/html/body/div[1]/main/div[2]/div/div/div[3]/div[2]/form/div/div[3]/div/button")).click();
+        Thread.sleep(2000);
 
-        //click radiobutton for AHQ subscription
-        wait= new WebDriverWait(driver, 15);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"step-3\"]/div/div/p")));
+//        //click radiobutton for AHQ subscription
+//        wait= new WebDriverWait(driver, 15);
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"step-3\"]/div/div/p")));
 
-        //Click Skip
-        driver.findElement(By.xpath("//*[@id=\"step-3\"]/div/form/div/div[4]/div/button[1]")).click();
+        //click hiup subscription
+        driver.findElement(By.xpath("//*[@id=\"new_org\"]")).click();
+
+        //click next
+        driver.findElement(By.xpath("/html/body/div[1]/main/div[2]/div/div/div[4]/div/form/div/div[3]/div/button")).click();
+        Thread.sleep(2000);
 
         //Click Submit
-        driver.findElement(By.xpath("//*[@id=\"step-4\"]/div/form/div/div[3]/div/button[2]")).click();
+        driver.findElement(By.xpath("/html/body/div[1]/main/div[2]/div/div/div[5]/div/form/div/div[3]/div/button[2]")).click();
         Thread.sleep(3000);
 
         wait = new WebDriverWait(driver, 15);
@@ -155,12 +160,12 @@ public class DashboardPage1 {
         WebElement edit_name = driver.findElement(By.name("client_name"));
         edit_name.clear();
         Thread.sleep(2000);
-        edit_name.sendKeys("EAutomation13 Test");
+        edit_name.sendKeys("EAutomation15 Test");
 
         WebElement edit_subdomain = driver.findElement(By.name("client_domain"));
         edit_subdomain.clear();
         Thread.sleep(2000);
-        edit_subdomain.sendKeys("eaut13");
+        edit_subdomain.sendKeys("eaut15");
 
         WebElement self_enrol = driver.findElement(By.name("only_selfenrol"));
         self_enrol.click();
