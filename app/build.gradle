@@ -39,4 +39,7 @@ dependencies {
     implementation files('libs/okhttp-3.9.1.jar')
     implementation files('libs/okio-1.13.0.jar')
     implementation files('libs/ae-awt.jar')
+
+    implementation 'org.apache.maven.plugins:maven-dependency-plugin:3.1.1'
+
 }

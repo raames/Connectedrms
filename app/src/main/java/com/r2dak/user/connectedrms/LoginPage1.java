@@ -1,5 +1,7 @@
 package com.r2dak.user.connectedrms;
 
+import android.support.v7.app.AppCompatActivity;
+
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +14,7 @@ import ae.java.awt.AWTException;
  * Created by olive-001 on 3/6/18.
  */
 
-public class LoginPage1 {
+public class LoginPage1 extends AppCompatActivity {
 
     public DashboardPage1 dash=new DashboardPage1();
     public UserManagement user=new UserManagement();
