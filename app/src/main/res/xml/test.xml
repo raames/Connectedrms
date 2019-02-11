@@ -1,0 +1,7 @@
+<suite name="Default Suite">
+    <test name="ConnectedRMS">
+        <classes>
+            <class name="com.r2dak.user.connectedrms.LoginPage1"/>
+        </classes>
+    </test> <!-- ConnectedRMS -->
+</suite> <!-- Default Suite -->

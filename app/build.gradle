@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
+    buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "com.r2dak.user.connectedrms"
         minSdkVersion 15
@@ -9,6 +10,13 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+    }
+    buildScan { termsOfServiceUrl = 'https://gradle.com/terms-of-service'; termsOfServiceAgree = 'yes' }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
     buildTypes {
         release {
@@ -23,9 +31,8 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    implementation 'org.testng:testng:6.7'
+    implementation 'com.android.support.test:runner:1.0.1'
+    implementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     implementation files('libs/byte-buddy-1.7.9.jar')
     implementation files('libs/client-combined-3.9.1.jar')
     implementation files('libs/client-combined-3.9.1-sources.jar')
@@ -39,7 +46,13 @@ dependencies {
     implementation files('libs/okhttp-3.9.1.jar')
     implementation files('libs/okio-1.13.0.jar')
     implementation files('libs/ae-awt.jar')
-
     implementation 'org.apache.maven.plugins:maven-dependency-plugin:3.1.1'
+    implementation files('libs/testng-6.14.3.jar')
+    //implementation 'com.google.android.gms:play-services-location:11.0.1'
+    implementation 'com.google.android.gms:play-services-ads:11.0.4'
+    implementation 'com.google.firebase:firebase-core:11.0.4'
+    implementation files('libs/selenium-server-standalone-3.13.0.jar')
+
+    implementation 'org.joml:joml:1.9.9'
 
 }

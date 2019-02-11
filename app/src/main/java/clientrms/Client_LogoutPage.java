@@ -13,11 +13,11 @@ public class Client_LogoutPage {
 
     public void clientlogout(WebDriver driver) throws InterruptedException {
 
-        WebElement clientadmin=driver.findElement(By.xpath("/html/body/header/div[1]/div/div/div[3]/ul/li[5]/a"));
+        WebElement clientadmin=driver.findElement(By.xpath("/html/body/header/div[1]/div/div/div[3]/ul/li[2]/a/img"));
         clientadmin.click();
 
         Thread.sleep(4000);
-        WebElement logoutbutton=driver.findElement(By.xpath("/html/body/header/div[1]/div/div/div[3]/ul/li[5]/ul/li[2]/a"));
+        WebElement logoutbutton=driver.findElement(By.xpath("/html/body/header/div[1]/div/div/div[3]/ul/li[2]/ul/li[2]"));
         logoutbutton.click();
         Thread.sleep(5000);
 
