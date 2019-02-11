@@ -26,13 +26,14 @@ public class LogoutPage {
 
     public void logout1(WebDriver driver) throws InterruptedException, IOException {
 
-        WebElement superadmin=driver.findElement(By.xpath("//*[@id=\"navbarDropdownMenuLink\"]"));
+        WebElement superadmin=driver.findElement(By.xpath("//*[@id=\"DropdownMenuLink1\"]"));
         superadmin.click();
 
-        Thread.sleep(4000);
-        WebElement logoutbtn=driver.findElement(By.xpath("//*[@id=\"app\"]/header/nav/ul/li/div/a[2]"));
+        Thread.sleep(3000);
+        WebElement logoutbtn=driver.findElement(By.xpath("/html/body/div[2]/header/div/ul/li[1]/div/div/a[2]"));
         logoutbtn.click();
-        Thread.sleep(5000);
+        Thread.sleep(2000);
+        driver.quit();
 
         /*WebElement emailaddress = driver.findElement(By.xpath("/*//*[@id=\"email\"]"));
         emailaddress.sendKeys("con81@yopmail.com");

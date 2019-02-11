@@ -24,7 +24,7 @@ public class Licensed_CoursePage {
         /*driver.findElement(By.xpath("/html/body/main/div[3]/div/div/div[1]/button")).click();
         Thread.sleep(2000);*/
 
-        WebElement memberclick=driver.findElement(By.xpath("//*[@id=\"title\"]/div[2]/a[1]/div/div[2]/h3"));
+        WebElement memberclick=driver.findElement(By.xpath("/html/body/main/div[3]/div/div/div[2]/div[2]/a[1]/div/div[2]/h3"));
         memberclick.click();
         Thread.sleep(5000);
 

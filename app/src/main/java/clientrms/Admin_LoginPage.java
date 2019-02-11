@@ -1,24 +1,25 @@
 package clientrms;
 
-import org.junit.Test;
+
+import android.support.v7.app.AppCompatActivity;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
 
 /**
  * Created by olive-001 on 6/5/18.
  */
 
-public class Admin_LoginPage {
+public class Admin_LoginPage extends AppCompatActivity {
 
     public Licensed_CoursePage licensed_coursePage = new Licensed_CoursePage();
     public Client_LogoutPage client_logoutPage = new Client_LogoutPage();
     public Recommended_CoursePage recommended_coursePage=new Recommended_CoursePage();
     public Member_Page member_page=new Member_Page();
     public PostNews_Page postNews_page=new PostNews_Page();
-
-
 
     @Test
     public void setup() throws Exception {

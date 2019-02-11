@@ -5,6 +5,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * Created by olive-001 on 3/6/18.
@@ -13,6 +15,8 @@ import org.openqa.selenium.interactions.Actions;
 public class UserManagement {
 
     Actions action;
+    WebDriverWait wait;
+
     public void create_admin(WebDriver driver) throws InterruptedException {
 
         WebElement usermanagement1=driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[2]/ul/li[3]/a"));
@@ -101,12 +105,12 @@ public class UserManagement {
         action.clickAndHold(optn_view).release().perform();
         Thread.sleep(3000);
 
-        WebElement edit_user=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div[3]/div/div/div/div/div/div/div[2]/div[2]/div/a[2]"));
+        WebElement edit_user=driver.findElement(By.xpath("/html/body/div[2]/main/div[4]/div/div/div/div/div/div/div[2]/div[2]/div/a[2]"));
         edit_user.click();
         Thread.sleep(3000);
         driver.navigate().back();
 
-        WebElement edit_psw = driver.findElement(By.xpath("//*[@id=\"app\"]/main/div[3]/div/div/div/div/div/div/div[2]/div[2]/div/a[1]"));
+        WebElement edit_psw = driver.findElement(By.xpath("/html/body/div[2]/main/div[4]/div/div/div/div/div/div/div[2]/div[2]/div/a[1]"));
         edit_psw.click();
         Thread.sleep(2000);
 
@@ -117,7 +121,14 @@ public class UserManagement {
 
         //change modal psw button
         driver.findElement(By.xpath("//*[@id=\"change_psw_modal\"]/div/div/div[2]/div/a")).click();
+        Thread.sleep(2000);
         driver.navigate().back();
+
+//        //close alert box
+//        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/button")).click();
+//        wait = new WebDriverWait(driver, 3);
+//        //wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[3]/div/div/div/div[3]/table/tbody/tr[1]/td[4]/div/button")));
+//        driver.navigate().back();
 
         //driver.navigate().back();
         /*WebElement edituser1=driver.findElement(By.xpath("/*//*[@id=\"name\"]"));
@@ -139,7 +150,7 @@ public class UserManagement {
         //click user link
        // driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[2]/ul/li[3]/a")).click();
 
-        Thread.sleep(3000);
+        Thread.sleep(3000);//*[@id="datatables_wrapper"]/tbody/tr[1]/td[5]/div/button
         WebElement optn=driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[1]/td[5]/div/button"));
         WebElement optn_edit=driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[1]/td[5]/div/div/a[3]"));
 
@@ -152,25 +163,28 @@ public class UserManagement {
 
         WebElement edituser=driver.findElement(By.xpath("//*[@id=\"name\"]"));
         edituser.clear();
-        edituser.sendKeys("editmaut15");
+        edituser.sendKeys("editaug20");
 
         WebElement editemail=driver.findElement(By.xpath("//*[@id=\"email\"]"));
         editemail.clear();
-        editemail.sendKeys("editmaut15@yopmail.com");
+        editemail.sendKeys("editaug20@yopmail.com");
+        Thread.sleep(3000);
+        WebElement savebutton=driver.findElement(By.xpath("/html/body/div[2]/main/div/div/div/div/div[2]/form/div[4]/div[2]/div/input"));
+        savebutton.click();
         Thread.sleep(3000);
 
-        WebElement savebutton=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/form/div[3]/div[2]/div/input"));
-        savebutton.click();
+        //close alert box
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/button")).click();
+        wait = new WebDriverWait(driver, 3);
         Thread.sleep(5000);
-
     }
     public void delete(WebDriver driver) throws InterruptedException {
 
         //click user link
          driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[2]/ul/li[3]/a")).click();
 
-        WebElement optn=driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[1]/td[5]/div/button"));
-        WebElement delete = driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[1]/td[5]/div/div/a[4]"));
+        WebElement optn=driver.findElement(By.xpath("/html/body/div[2]/main/div[3]/div/div/div/div[3]/table/tbody/tr[1]/td[5]/div/button"));
+        WebElement delete = driver.findElement(By.xpath("/html/body/div[2]/main/div[3]/div/div/div/div[3]/table/tbody/tr[1]/td[5]/div/div/a[4]"));
 
         action = new Actions(driver);
         action.click(optn).perform();
@@ -180,14 +194,18 @@ public class UserManagement {
         Thread.sleep(3000);
 
         //click modal box Delete
-        driver.findElement(By.xpath("/html/body/div[1]/main/div[3]/div/div/div/div[2]/div[1]/div/div/div[2]/div[2]/a")).click();
+        driver.findElement(By.xpath("/html/body/div[2]/main/div[3]/div/div/div/div[3]/div[1]/div/div/div[2]/div[2]/div[1]/a")).click();
         Thread.sleep(5000);
+
+        //close alert box
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/button")).click();
+        wait = new WebDriverWait(driver, 5);
 
     }
     public void restore(WebDriver driver) throws InterruptedException {
 
-        WebElement restore_option = driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[1]/td[5]/div/button"));
-        WebElement restore = driver.findElement(By.xpath("//*[@id=\"datatables_wrapper\"]/tbody/tr[1]/td[5]/div/div/a"));
+        WebElement restore_option = driver.findElement(By.xpath("/html/body/div[2]/main/div[3]/div/div/div/div[3]/table/tbody/tr[1]/td[5]/div/button"));
+        WebElement restore = driver.findElement(By.xpath("/html/body/div[2]/main/div[3]/div/div/div/div[3]/table/tbody/tr[1]/td[5]/div/div/a"));
 
         action = new Actions(driver);
         action.click(restore_option).perform();
@@ -195,6 +213,10 @@ public class UserManagement {
         //you need to release the control from the test
         action.clickAndHold(restore).release().perform();
         Thread.sleep(5000);
+
+        //close alert box
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/button")).click();
+        wait = new WebDriverWait(driver, 5);
 
     }
 }

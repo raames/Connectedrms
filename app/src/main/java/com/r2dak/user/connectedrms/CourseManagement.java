@@ -6,6 +6,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * Created by olive-001 on 3/6/18.
@@ -14,24 +16,24 @@ import org.openqa.selenium.interactions.Actions;
 public class CourseManagement {
 
     public DashboardPage1 db = new DashboardPage1();
-
+    WebDriverWait wait;
     Actions action;
     public void search_course(WebDriver driver) throws InterruptedException {
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
-
+Thread.sleep(3000);
         //click Course link
         driver.findElement(By.xpath("//*[@id=\"slide-out\"]/ul/li[2]/ul/li[4]/a")).click();
-
+        Thread.sleep(3000);
         WebElement search=driver.findElement(By.xpath("//*[@id=\"form-search\"]/input"));
         search.click();
-        search.sendKeys("coursa test");
+        search.sendKeys("J3 sc course test");
         Thread.sleep(2000);
         search.sendKeys(Keys.ENTER);
         Thread.sleep(3000);
 
-        WebElement optn = driver.findElement(By.xpath("/html/body/div[1]/main/div/div[2]/div/div/div[2]/table/tbody/tr/td[4]/div/button"));
-        WebElement optn_view = driver.findElement(By.xpath("/html/body/div[1]/main/div/div[2]/div/div/div[2]/table/tbody/tr/td[4]/div/div/a[1]"));
+        WebElement optn = driver.findElement(By.xpath("/html/body/div[2]/main/div/div/div/div/div[3]/table/tbody/tr/td[4]/div/button"));
+        WebElement optn_view = driver.findElement(By.xpath("/html/body/div[2]/main/div/div/div/div/div[3]/table/tbody/tr/td[4]/div/div/a[1]"));
 
         action =new Actions(driver);
         action.click(optn).perform();
@@ -40,7 +42,7 @@ public class CourseManagement {
         Thread.sleep(3000);
 
         //click edit course
-        driver.findElement(By.xpath("//*[@id=\"app\"]/main/div[2]/div/div/div[1]/div/div/div/div[2]/div[2]/div/a")).click();
+        driver.findElement(By.xpath("/html/body/div[2]/main/div[3]/div/div/div[1]/div/div/div/div[2]/div[2]/div/a")).click();
         Thread.sleep(3000);
         driver.navigate().back();
         driver.navigate().back();
@@ -66,8 +68,8 @@ public class CourseManagement {
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
-        WebElement optn = driver.findElement(By.xpath("/html/body/div[1]/main/div/div[2]/div/div/div[2]/table/tbody/tr/td[4]/div/button"));
-        WebElement course_edit=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/table/tbody/tr/td[4]/div/div/a[2]"));
+        WebElement optn = driver.findElement(By.xpath("/html/body/div[2]/main/div/div/div/div/div[3]/table/tbody/tr/td[4]/div/button"));
+        WebElement course_edit=driver.findElement(By.xpath("/html/body/div[2]/main/div/div/div/div/div[3]/table/tbody/tr/td[4]/div/div/a[2]"));
         action =new Actions(driver);
         action.click(optn).perform();
         Thread.sleep(3000);
@@ -83,20 +85,25 @@ public class CourseManagement {
         js.executeScript("CKEDITOR.instances.overview.setData('This is overview')");
         js.executeScript("CKEDITOR.instances.preview.setData('This is preview')");
 
-        WebElement preview_link = driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/form/div[6]/div[2]/input"));
+        WebElement preview_link = driver.findElement(By.xpath("/html/body/div[2]/main/div/div/div/div/div[3]/form/div[6]/div[2]/input"));
         preview_link.clear();
         preview_link.sendKeys("https://www.youtube.com/embed/bnVUHWCynig");
         Thread.sleep(3000);
 
         //click save button
-        driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/form/div[7]/div[2]/div/input")).click();
+        driver.findElement(By.xpath("/html/body/div[2]/main/div/div/div/div/div[3]/form/div[7]/div[2]/div/input")).click();
         Thread.sleep(5000);
+
+//        //close alert box
+//        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/button")).click();
+//        wait = new WebDriverWait(driver, 3);
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/header/div/ul/li[2]/ul/li[4]/a")));
     }
 
     public void option_module(WebDriver driver) throws InterruptedException {
 
-        WebElement optn = driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/table/tbody/tr[1]/td[4]/div/button"));
-        WebElement optn_module=driver.findElement(By.xpath("//*[@id=\"app\"]/main/div/div[2]/div/div/div[2]/table/tbody/tr[1]/td[4]/div/div/a[3]"));
+        WebElement optn = driver.findElement(By.xpath("/html/body/div[2]/main/div/div/div/div/div[3]/table/tbody/tr/td[4]/div/button"));
+        WebElement optn_module=driver.findElement(By.xpath("/html/body/div[2]/main/div/div/div/div/div[3]/table/tbody/tr/td[4]/div/div/a[3]"));
         action =new Actions(driver);
         action.click(optn).perform();
         Thread.sleep(3000);
@@ -116,12 +123,17 @@ public class CourseManagement {
         WebElement add=driver.findElement(By.xpath("//*[@id=\"addmodule\"]/div/div/div[2]/form/div[3]/button"));
         add.click();
         Thread.sleep(3000);
+
+//        //close alert box
+//        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/button")).click();
+//        wait = new WebDriverWait(driver, 3);
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/header/div/ul/li[2]/ul/li[4]/a")));
     }
 
     public void module_unit(WebDriver driver) throws InterruptedException {
 
-        WebElement optn = driver.findElement(By.xpath("/html/body/div[1]/main/div/div[2]/div/div/div[2]/table/tbody/tr[1]/td[5]/div/button"));
-        WebElement optn_unit=driver.findElement(By.xpath("/html/body/div[1]/main/div/div[2]/div/div/div[2]/table/tbody/tr[1]/td[5]/div/div/a[3]"));
+        WebElement optn = driver.findElement(By.xpath("/html/body/div[2]/main/div/div/div/div/div[3]/table/tbody/tr[1]/td[5]/div/button"));
+        WebElement optn_unit=driver.findElement(By.xpath("/html/body/div[2]/main/div/div/div/div/div[3]/table/tbody/tr[1]/td[5]/div/div/a[3]"));
         action = new Actions(driver);
         action.click(optn).perform();
         Thread.sleep(2000);
@@ -141,15 +153,15 @@ public class CourseManagement {
         Thread.sleep(2000);
 
         //click save unit
-        driver.findElement(By.xpath("//*[@id=\"addunit\"]/div/div/div[2]/form/div[3]/button")).click();
+        driver.findElement(By.xpath("/html/body/div[2]/main/div/div/div/div/div[2]/div/div[2]/div/div/div[2]/form/div[3]/button")).click();
         Thread.sleep(5000);
 
     }
 
     public void unit_delete(WebDriver driver) throws InterruptedException {
 
-        WebElement optn = driver.findElement(By.xpath("/html/body/div[1]/main/div/div[2]/div/div/div[2]/table/tbody/tr[1]/td[5]/div/button"));
-        WebElement delete = driver.findElement(By.xpath("/html/body/div[1]/main/div/div[2]/div/div/div[2]/table/tbody/tr[1]/td[5]/div/div/a[3]"));
+        WebElement optn = driver.findElement(By.xpath("/html/body/div[2]/main/div/div/div/div/div[3]/table/tbody/tr[1]/td[5]/div/button"));
+        WebElement delete = driver.findElement(By.xpath("/html/body/div[2]/main/div/div/div/div/div[3]/table/tbody/tr[1]/td[5]/div/div/a[3]"));
 
         action = new Actions(driver);
         action.click(optn).perform();
@@ -159,13 +171,18 @@ public class CourseManagement {
         Thread.sleep(3000);
 
         //click modal box Delete
-        driver.findElement(By.xpath("/html/body/div[1]/main/div/div[2]/div/div/div[2]/div[2]/div/div/div[2]/div[2]/a")).click();
+        driver.findElement(By.xpath("/html/body/div[2]/main/div/div/div/div/div[3]/div[2]/div/div/div[2]/div[2]/a")).click();
         Thread.sleep(5000);
+
+//        //close alert box
+//        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/button")).click();
+//        wait = new WebDriverWait(driver, 3);
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/header/div/ul/li[2]/ul/li[4]/a")));
 
     }
     public void unit_restore(WebDriver driver) throws InterruptedException {
-        WebElement restore_option = driver.findElement(By.xpath("/html/body/div[1]/main/div/div[2]/div/div/div[3]/table/tbody/tr[1]/td[5]/div/button"));
-        WebElement restore = driver.findElement(By.xpath("/html/body/div[1]/main/div/div[2]/div/div/div[3]/table/tbody/tr[1]/td[5]/div/div/a"));
+        WebElement restore_option = driver.findElement(By.xpath("/html/body/div[2]/main/div/div/div/div/div[3]/table/tbody/tr[1]/td[5]/div/button"));
+        WebElement restore = driver.findElement(By.xpath("/html/body/div[2]/main/div/div/div/div/div[3]/table/tbody/tr[1]/td[5]/div/div/a"));
 
         action = new Actions(driver);
         action.click(restore_option).perform();
@@ -173,6 +190,11 @@ public class CourseManagement {
         //you need to release the control from the test
         action.clickAndHold(restore).release().perform();
         Thread.sleep(5000);
+
+//        //close alert box
+//        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/button")).click();
+//        wait = new WebDriverWait(driver, 3);
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/header/div/ul/li[2]/ul/li[4]/a")));
 
     }
     public void editmodule(WebDriver driver) throws InterruptedException {
